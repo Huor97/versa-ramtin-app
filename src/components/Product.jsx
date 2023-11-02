@@ -196,17 +196,17 @@ export default function Product({ normalization }) {
     {
       title: "Tomato Paste",
       description:
-        "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux",
+        "Tomato paste is a thick paste made from tomatoes, which are cooked for several hours to reduce water content, straining out seeds and skins, and cooking the liquid again to reduce the base to a thick, rich concentrate.[1] It is used to impart an intense tomato flavour to a variety of dishes, such as pasta, soups and braised meat. It is used as an ingredient in many world cuisines.",
     },
     {
       title: "Pickle",
       description:
-        "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux",
+        "A pickled cucumber – commonly known as a pickle in the United States and Canada and a gherkin (/ɡərkɪn/) in Britain, Ireland, South Africa, Australia, and New Zealand – is a usually small or miniature cucumber that has been pickled in a brine, vinegar, or other solution and left to ferment. The fermentation process is executed either by immersing the cucumbers in an acidic solution or through souring by lacto-fermentation. Pickled cucumbers are often part of mixed pickles.",
     },
     {
       title: "Rice",
       description:
-        "Le Lorem Ipsum est simplement du faux texte employé dans la composition et la mise en page avant impression. Le Lorem Ipsum est le faux texte standard de l'imprimerie depuis les années 1500, quand un imprimeur anonyme assembla ensemble des morceaux",
+        "Rice is the seed of the grass species Oryza sativa (Asian rice) or, less commonly, O. glaberrima (African rice). The name wild rice is usually used for species of the genera Zizania and Porteresia, both wild and domesticated, although the term may also be used for primitive or uncultivated varieties of Oryza.",
     },
   ];
 

@@ -21,7 +21,7 @@ export default function AboutUs({ normalization }) {
 
       window.scrollY > 300 ? setFixedLogo(true) : setFixedLogo(false);
       window.scrollY > 300 ? setVesibleArrow(true) : setVesibleArrow(false);
-      normalization > 0.472 ? setFixedContact(true) : setFixedContact(false);
+      normalization > 0.489 ? setFixedContact(true) : setFixedContact(false);
     };
 
     window.addEventListener("scroll", handleScroll);
