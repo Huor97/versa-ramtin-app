@@ -82,7 +82,7 @@ export default function Services({ normalization }) {
       trigger: div1Ref.current,
       start: "top 50px", // Définissez le point de départ pour la disparition de l'objet
       end: "bottom 50px", // Définissez le point de fin pour la disparition de l'objet
-      markers: true,
+      // markers: true,
 
       onEnter: () => {
         gsap.to(div1Ref.current, {
@@ -133,7 +133,7 @@ export default function Services({ normalization }) {
           trigger: div5Ref.current,
           start: "top 50px", // Définissez le point de départ pour la disparition de l'objet
           end: "bottom 50px", // Définissez le point de fin pour la disparition de l'objet
-          markers: true,
+          // markers: true,
     
           onEnter: () => {
             gsap.to(div5Ref.current, {
@@ -184,7 +184,7 @@ export default function Services({ normalization }) {
         trigger: div2Ref.current,
         start: "top 100px", // Définissez le point de départ pour la disparition de l'objet
         end: "bottom 100px", // Définissez le point de fin pour la disparition de l'objet
-        markers: true,
+        // markers: true,
   
         onEnter: () => {
           gsap.to(div2Ref.current, {
@@ -234,7 +234,7 @@ export default function Services({ normalization }) {
       trigger: div4Ref.current,
       start: "top 100px", // Définissez le point de départ pour la disparition de l'objet
       end: "bottom 100px", // Définissez le point de fin pour la disparition de l'objet
-      markers: true,
+      // markers: true,
 
       onEnter: () => {
         gsap.to(div4Ref.current, {
@@ -284,7 +284,7 @@ export default function Services({ normalization }) {
       trigger: div3Ref.current,
       start: "top -500px", // Définissez le point de départ pour la disparition de l'objet
       end: "bottom -500px", // Définissez le point de fin pour la disparition de l'objet
-      markers: true,
+      // markers: true,
 
       onEnter: () => {
         gsap.to(div3Ref.current, {

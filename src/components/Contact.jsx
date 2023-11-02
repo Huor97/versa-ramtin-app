@@ -162,7 +162,7 @@ const Form = ({ normalization }) => {
         start: "top 380px",
         end: "bottom 380px",
         scrub: 0.5,
-        markers: true,
+        // markers: true,
         onEnter: () => {
           gsap.to(div3Ref.current, {
             x: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
