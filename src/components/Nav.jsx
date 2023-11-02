@@ -1,9 +1,16 @@
 import { useEffect, useState } from "react";
 import "./Nav.css";
-
+/**
+ * normalization : int
+ * @param {*} param0 
+ * @returns 
+ */
 export default function Nav({ normalization }) {
+  const [activeGradient, setActiveGradient] = useState(false);
   const [active, setActive] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
+  const [scrollY, setScrollY] = useState(0);
+
   const handleScrollTo = (scrollPosition) => {
     window.scrollTo({
       top: scrollPosition,
@@ -11,18 +18,23 @@ export default function Nav({ normalization }) {
     });
   };
 
-  const [scrollY, setScrollY] = useState(0);
+
 
   const handleScroll = () => {
+
+    if(window.scrollY > 1500){
     // Récupérez la hauteur totale de votre page
     const totalHeight =
       document.documentElement.scrollHeight - window.innerHeight;
 
-    // Mettez à jour la valeur de scrollY entre 0 et 100
-    let newScrollY = (window.scrollY / totalHeight) * 120;
+        
+        // Mettez à jour la valeur de scrollY entre 0 et 100
+        let newScrollY = (window.scrollY / totalHeight) * 120 -21;
+        // Mettez à jour la valeur de scrollY avec la nouvelle valeur calculée
+        setScrollY(newScrollY);
+        // console.log("newScroll :" ,newScrollY);
+      }
 
-    // Mettez à jour la valeur de scrollY avec la nouvelle valeur calculée
-    setScrollY(newScrollY);
   };
 
   useEffect(() => {
@@ -35,18 +47,20 @@ export default function Nav({ normalization }) {
     };
   }, []); // Le tableau vide [] assure que cet effet ne s'exécute qu'une fois après le rendu initial
 
-  console.log("scroll ==> ", normalization);
   useEffect(() => {
     const scrollActive = () => {
       window.scrollY > 400 ? setActive(true) : setActive(false);
+      window.scrollY > 500 ? setActiveGradient(true) : setActiveGradient(false);
 
-      if (normalization >= 0.9) {
-        setActiveSection("news");
-      } else if (normalization >= 0.75) {
+      // if (normalization >= 1) {
+      //   setActiveSection("news");
+      // }
+
+      if (normalization >= 1) {
         setActiveSection("contact");
-      } else if (normalization >= 0.6) {
+      } else if (normalization >= 0.690) {
         setActiveSection("products");
-      } else if (normalization >= 0.47) {
+      } else if (normalization >= 0.455) {
         setActiveSection("services");
       } else if (normalization >= 0.19) {
         setActiveSection("about");
@@ -61,12 +75,12 @@ export default function Nav({ normalization }) {
       window.removeEventListener("scroll", scrollActive);
     };
   }, [normalization]);
-
+console.log(normalization, "normalization");
   return (
     <div className="nav">
       <div className={`ligne ${active ? "" : "navbar-active"}`}></div>
       <div
-        className={`about-gradient ${active ? "" : "navbar-active"}`}
+        className={`about-gradient ${activeGradient ? "" : "navbar-active"}`}
         style={{ transform: `translateY(${scrollY}px)` }}
       ></div>
 
@@ -102,14 +116,14 @@ export default function Nav({ normalization }) {
           >
             CONTACT US
           </li>
-          <li
+          {/* <li
             style={{
               color: activeSection === "news" ? "#dfceba" : "#4f6073",
             }}
             onClick={() => handleScrollTo(11000)}
           >
             NEWS
-          </li>
+          </li> */}
         </ul>
       </div>
     </div>

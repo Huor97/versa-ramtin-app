@@ -9,14 +9,19 @@ export default function Canva({ normalization }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      window.scrollY > 500 ? setVisibled(true) : setVisibled(false);
+      // window.scrollY > 500 ? setVisibled(true) : setVisibled(false);
+      if (normalization > 0.1 && normalization < 0.471) {
+        setVisibled(true);
+      } else {
+        setVisibled(false);
+      }
     };
     window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [normalization]);
   return (
     <div className={`canva-container ${visibled ? "visible" : " hedden"}`}>
       <Canvas style={{ position: "fixed" }}>

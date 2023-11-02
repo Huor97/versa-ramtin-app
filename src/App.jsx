@@ -8,7 +8,7 @@ import Services from "./components/Services";
 import Product from "./components/Product";
 import Products from "./components/Products";
 import Contact from "./components/Contact";
-import News from "./components/News";
+// import News from "./components/News";
 function App() {
   const [scrollY, setScrollY] = useState(0);
   const [scrollPosition, setScrollPosition] = useState(0);
@@ -89,9 +89,9 @@ function App() {
       <section className="section-contact">
         <Contact normalization={scrollY} />
       </section>
-      <section>
+      {/* <section>
         <News normalization={scrollY} />
-      </section>
+      </section> */}
     </div>
   );
 }
