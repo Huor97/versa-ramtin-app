@@ -1,4 +1,4 @@
-$col-accent: #fff;
+$col-accent: #FFF;
 $col-primary: #f72f4e;
 $col-dark: #140228;
 $formElements: 5;
@@ -17,15 +17,16 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 
 .contacte-us {
   width: 100vw;
+  height: 10vh;
   position: relative;
   top: 5vh;
-  font-size: 2rem;
   font-family: "Acumin Variable Concept", sans-serif;
   font-family: "Acumin Variable Concept", serif;
 }
 
 .icon {
-  font-size: 30px;
+  // font-size: 30px;
+  font-size: 40px;
   line-height: 60px;
   display: block;
   margin-top: 15px;
@@ -37,8 +38,7 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @keyframes wiggle {
-  0%,
-  100% {
+  0%, 100% {
     transform: rotate(-15deg);
   }
   50% {
@@ -50,8 +50,8 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
   animation: none;
 }
 
-h1,
-h2 {
+
+h1, h2 {
   font-weight: 700;
   color: $col-accent;
   font-weight: 700;
@@ -63,8 +63,7 @@ h2 {
 .form-overlay {
   width: 0%;
   height: 100%;
-  top: 0;
-  left: 0;
+  top: 0; left:0;
   position: fixed;
   opacity: 0;
   background: #000;
@@ -73,18 +72,19 @@ h2 {
 }
 .show-form-overlay {
   .form-overlay {
-    width: 100%;
+    width:100%;
     opacity: 0.7;
     z-index: 999;
 
     transition: background 1s, opacity 0.4s, width 0s;
   }
-
+  
   &.form-submitted .form-overlay {
-    background: #119da4;
+    background: #119DA4;
     transition: background 0.6s;
   }
 }
+
 
 #form-container {
   display: flex;
@@ -97,35 +97,39 @@ h2 {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 15vh;
-  background-color: #4f6073;
+  bottom: 8vh;  
+  background-color:  #4f6073;;
 
   overflow: hidden;
   border-radius: 50%;
-  width: 60px;
-  max-width: 60px;
-  height: 60px;
+  width: 80px;
+  max-width: 80px;
+  height: 80px;
   text-align: center;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
 
-  transition: all 0.2s 0.45s, height 0.2s $easer 0.25s,
-    max-width 0.2s $easer 0.35s, width 0.2s $easer 0.35s;
-
+  transition: all 0.2s 0.45s,
+              height 0.2s $easer 0.25s, 
+              max-width 0.2s $easer 0.35s, 
+              width 0.2s $easer 0.35s;
+  
   &.expand {
     cursor: auto;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.17);
     border-radius: 0;
     width: 60%;
     border-radius: 10px;
     height: 500px;
     max-width: 610px;
     padding: 0;
-
-    transition: all 0.2s, max-width 0.2s $easer 0.1s, height 0.3s ease 0.25s;
+    
+    transition: all 0.2s, 
+                max-width 0.2s $easer 0.1s, 
+                height 0.3s ease 0.25s;
   }
 }
 
-#form-close {
+#form-close{
   cursor: pointer;
   position: relative;
 }
@@ -138,19 +142,19 @@ h2 {
   display: block;
   transition: all 0.7s $easer;
 }
-.icon:hover::before {
+.icon:hover::before{
   animation: wiggle 0.1s linear infinite;
 }
-.fa-pencil::before {
+.fa-pencil::before{
   display: block;
 }
-.fa-close::before {
+.fa-close::before{
   display: none;
 }
 .expand.fa-pencil::before {
   display: none;
 }
-.expand.fa-close::before {
+.expand.fa-close::before{
   display: block;
   animation: none;
 }
@@ -163,14 +167,14 @@ h2 {
   opacity: 0;
   text-align: left;
   transition: transform 0.2s $easer, opacity 0.2s 0.2s;
-
+ 
   &.expand {
     transform: translateY(0px);
     opacity: 1;
 
     transition: transform 0.7s $easer 0.3s, opacity 0s;
   }
-
+  
   form {
     color: $col-accent;
     width: 100%;
@@ -185,7 +189,7 @@ h2 {
 #form-head {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items:center ;
   justify-content: center;
   font-size: 100%;
   padding: 0;
@@ -193,9 +197,8 @@ h2 {
   color: $col-accent;
   text-align: center;
   transition: all 0.8s 0.6s;
-
-  h1,
-  p {
+  
+  h1, p {
     padding: 0;
     margin: 0;
     color: #fff;
@@ -217,10 +220,10 @@ h2 {
   .post {
     display: block;
   }
-}
+} 
 
 .input {
-  background: rgba(0, 0, 0, 0.2);
+  background: rgba(0,0,0,0.2);
   display: block;
   height: 50px;
   width: 100%;
@@ -233,36 +236,28 @@ h2 {
   box-shadow: none;
   transform: translateX(0);
 }
-::-webkit-input-placeholder {
-  /* Safari, Chrome and Opera */
-  color: rgba(255, 255, 255, 0.8);
+::-webkit-input-placeholder {/* Safari, Chrome and Opera */
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
-} /* Firefox 18- */
-:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+}/* Firefox 18- */:-moz-placeholder {
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
-} /* Firefox 19+ */
-::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+}/* Firefox 19+ */::-moz-placeholder {
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
-} /* IE 10+ */
-:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+}/* IE 10+ */:-ms-input-placeholder {
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
-} /* Edge */
-::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+}/* Edge */::-ms-input-placeholder {
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
-} /* Default */
-:placeholder-shown {
-  color: rgba(255, 255, 255, 0.8);
+}/* Default */:placeholder-shown {
+  color: rgba(255,255,255,0.8);
   font-size: 90%;
 }
 
-input,
-select,
-textarea {
-  color: $col-accent;
+input, select, textarea{
+    color: $col-accent;
 }
 
 .input.message {
@@ -271,25 +266,26 @@ textarea {
   padding: 10px;
 }
 
-.input.submit {
+.input.submit{
   background-color: $col-accent;
-  color: #030b15;
+  color: #030B15;
   font-size: 120%;
   height: 80px;
-  box-shadow: 0 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 5px rgba(0,0,0,0.5);
   transition: all 0.1s, transform 0s 0.6s;
   cursor: pointer;
 
-  &:active {
+  &:active{
     margin-top: 15px;
-    box-shadow: 0 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 rgba(0,0,0,0.5);
   }
 }
 
-.input.form-error {
+.input.form-error{
   animation: error 0.8s ease;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
 }
+
 
 select option {
   background: $col-primary;
@@ -300,28 +296,27 @@ select option {
 }
 select option:disabled {
   font-style: italic;
-  color: rgba(255, 255, 255, 0.9);
+  color: rgba(255,255,255,0.9);
   font-size: 90%;
 }
 
 //Handle input submit and return transitions last.
-.input {
+.input{
   transition: transform 0s 1s;
 }
-.form-submitted .input {
+.form-submitted .input{
   transform: translateX(150%);
   opacity: 0;
   transition: all 0.5s, transform 0.4s $easer 0s;
-
+  
   @for $i from 1 to ($formElements + 1) {
     &:nth-child(#{$i}) {
-      //   transition-delay: #{$i / 10}s;
       transition-delay: calc($i / 10);
     }
   }
 }
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-box-shadow: 0 0 0px 1000px #FFF inset;
 }
 
 @media (max-width: 600px) {
@@ -332,11 +327,11 @@ input:-webkit-autofill {
     overflow: initial;
     overflow-x: hidden;
     bottom: 0;
-  }
+  }  
   h1 {
     font-size: 300%;
   }
-  .icon:hover::before {
+  .icon:hover::before{
     animation: none;
   }
   .form-overlay {
@@ -346,34 +341,92 @@ input:-webkit-autofill {
 }
 
 @keyframes error {
-  0%,
-  100% {
-    transform: translateX(0);
-  }
-  10%,
-  30%,
-  50%,
-  70%,
-  90% {
-    transform: translateX(-6px);
-  }
-  20%,
-  40%,
-  60%,
-  80% {
-    transform: translateX(6px);
-  }
+    0%, 100% {transform: translateX(0);}
+    10%, 30%, 50%, 70%, 90% {transform: translateX(-6px);}
+    20%, 40%, 60%, 80% {transform: translateX(6px);}
 }
 
 @keyframes wiggle {
-  0%,
-  100% {
-    transform: rotate(-15deg);
-  }
-  50% {
-    transform: rotate(15deg);
-  }
+    0%, 100% {transform: rotate(-15deg);}
+    50% {transform: rotate(15deg);}
 }
+
+
+// ======================================== social contact
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li a {
+  position: relative;
+  width: 60px;
+  height: 60px;
+  display: block;
+  text-align: center;
+  margin: 0 10px;
+  border-radius: 50%;
+  padding: 6px;
+  box-sizing: border-box;
+  text-decoration: none;
+  box-shadow: 0px 5px 15px rgba(255, 255, 255, 0.377);
+  background: linear-gradient(0deg, rgb(182, 182, 182), rgb(0, 0, 0));
+  transition: 0.5s;
+}
+
+.social-icons li a:hover {
+  box-shadow: 0 2px 5px rgba(255, 255, 255, 0.301);
+  text-decoration: none;
+}
+
+.social-icons li a .fab {
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: linear-gradient(0deg, #fff, #ddd);
+  border-radius: 50%;
+  line-height: calc(60px - 12px);
+  font-size: 24px;
+  color: #262626;
+  transition: 0.5s;
+}
+
+/* .whatsapp {
+  width: 80%;
+  height: 80%;
+} */
+
+.social-icons li:nth-child(1) a:hover .fab {
+  color: #23db32;
+}
+
+.social-icons li:nth-child(2) a:hover .fab {
+  color: #00aced;
+}
+
+.social-icons li:nth-child(3) a:hover .fab {
+  color: #dd4b39;
+}
+/* 
+.social-icons li:nth-child(4) a:hover .fab {
+  color: #007bb6;
+}
+
+.social-icons li:nth-child(5) a:hover .fab {
+  color: #e4405f;
+} */
+
+
+
 
 // ===================================================================
 .contacte {
@@ -464,4 +517,21 @@ input:-webkit-autofill {
   background-color: rgba(83, 181, 247, 0.863);
   color: rgb(0, 0, 0);
   box-shadow: 3px 4px 42px -10px rgb(120, 179, 255);
+}
+
+
+.copyright {
+  // position: relative;
+  // right: 2vw;
+  opacity: 0;
+  bottom: 1vh;
+  font-size: 24px;
+  color: #fff;
+}
+
+.copyright.fixed {
+  opacity: 1;
+  color: #fff;
+  bottom: 1vh;
+  font-size: 24px;
 }

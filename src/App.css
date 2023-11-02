@@ -29,10 +29,13 @@ body {
 .section-services {
   /* background-color: rgb(189, 95, 95); */
   height: 100vh;
+  display: flex;
+  justify-content: center;
 }
 
 .section-product {
-  height: 100vh;
+  height: 150vh;
+  /* background-color: #fff; */
 }
 
 .section-products {

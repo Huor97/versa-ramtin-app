@@ -18,7 +18,6 @@ export default function AboutUs({ normalization }) {
 
   useEffect(() => {
     const handleScroll = () => {
-      console.log("contact icone ==> ", normalization);
 
       window.scrollY > 300 ? setFixedLogo(true) : setFixedLogo(false);
       window.scrollY > 300 ? setVesibleArrow(true) : setVesibleArrow(false);

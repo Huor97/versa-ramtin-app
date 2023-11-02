@@ -124,7 +124,7 @@ export default function Products({ normalization }) {
 
   useEffect(() => {
     const vesibledScroll = () => {
-      normalization > 0.754 ? setVisibled(true) : setVisibled(false);
+      normalization > 0.8519? setVisibled(true) : setVisibled(false);
     };
 
     window.addEventListener("scroll", vesibledScroll);
@@ -142,8 +142,8 @@ export default function Products({ normalization }) {
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div1Ref.current,
-      start: "top 500px",
-      end: "bottom 500px",
+      start: "top 600px",
+      end: "bottom 600px",
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
@@ -170,8 +170,8 @@ export default function Products({ normalization }) {
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div2Ref.current,
-      start: "top 1000px",
-      end: "bottom 1000px",
+      start: "top 1100px",
+      end: "bottom 1100px",
       scrub: 0.5,
       // markers: true,
       onEnter: () => {

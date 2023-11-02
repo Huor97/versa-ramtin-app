@@ -65,7 +65,7 @@ $scrollTime: 1.5s;
     width: 140%;
     height: 100%;
     transform: skewX($skewDeg * -1);
-    background: #000;
+    // background: #000;
 
     .skw-page__half--left & {
       left: -40%;

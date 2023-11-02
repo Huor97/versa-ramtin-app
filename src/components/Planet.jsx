@@ -22,7 +22,6 @@ export default function Planet({ normalization }) {
     const handleScroll = () => {
       if (refPlanet.current) {
         const scrollY = window.scrollY;
-        console.log("sc:", scrollY);
 
         let positionX;
         let rotationSpeed;
