@@ -27,11 +27,25 @@ const description = [
 export default function Services({ normalization }) {
   const [vesible, setVesible] = useState(false);
   const [visibled, setVisibled] = useState(false);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
   const div1Ref = useRef(null);
   const div2Ref = useRef(null);
   const div3Ref = useRef(null);
   const div4Ref = useRef(null);
   const div5Ref = useRef(null);
+
+  // size screen change 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
   // fixed container
   useEffect(() => {
@@ -305,53 +319,107 @@ export default function Services({ normalization }) {
   }, []);
 
   return (
-    <div className={`container ${vesible ? "fixed" : ""}`}>
+    <>
       {/* {images.map((image, index) => ( */}
-      <div
-        ref={div1Ref}
-        className={`card  date-description card-1`}
-        style={{ "--img": `url(${images[0]})` }}
-        data-description={description[0]}
-      >
-        <h2 className="date-text">{noms[0]}</h2>
-      </div>
+      {isSmallScreen ? (
+        <div className={`container`}>
+                <div
+          // ref={div1Ref}
+          className={`card  date-description card-1`}
+          style={{ "--img": `url(${images[0]})` }}
+          data-description={description[0]}
+        >
+          <h2 className="date-text">{noms[0]}</h2>
+        </div>
+  
+        <div
+          // ref={div2Ref}
+          className={`card  date-description card-2`}
+          style={{ "--img": `url(${images[1]})` }}
+          data-description={description[1]}
+        >
+          <h2 className="date-text">{noms[1]}</h2>
+        </div>
+  
+        <div
+          // ref={div3Ref}
+          className={`card  date-description card-3`}
+          style={{ "--img": `url(${images[2]})` }}
+          data-description={description[2]}
+        >
+          <h2 className="date-text">{noms[2]}</h2>
+        </div>
+  
+        <div
+          // ref={div4Ref}
+          className={`card  date-description card-4`}
+          style={{ "--img": `url(${images[3]})` }}
+          data-description={description[3]}
+        >
+          <h2 className="date-text">{noms[3]}</h2>
+        </div>
+  
+        <div
+          // ref={div5Ref}
+          className={`card  date-description card-5`}
+          style={{ "--img": `url(${images[4]})` }}
+          data-description={description[4]}
+        >
+          <h2 className="date-text">{noms[4]}</h2>
+        </div>
+        </div>
+      ):(
+<div className={`container ${vesible ? "fixed" : ""}`}>
 
-      <div
-        ref={div2Ref}
-        className={`card  date-description card-2`}
-        style={{ "--img": `url(${images[1]})` }}
-        data-description={description[1]}
-      >
-        <h2 className="date-text">{noms[1]}</h2>
-      </div>
+<div
+          ref={div1Ref}
+          className={`card  date-description card-1`}
+          style={{ "--img": `url(${images[0]})` }}
+          data-description={description[0]}
+        >
+          <h2 className="date-text">{noms[0]}</h2>
+        </div>
+  
+        <div
+          ref={div2Ref}
+          className={`card  date-description card-2`}
+          style={{ "--img": `url(${images[1]})` }}
+          data-description={description[1]}
+        >
+          <h2 className="date-text">{noms[1]}</h2>
+        </div>
+  
+        <div
+          ref={div3Ref}
+          className={`card  date-description card-3`}
+          style={{ "--img": `url(${images[2]})` }}
+          data-description={description[2]}
+        >
+          <h2 className="date-text">{noms[2]}</h2>
+        </div>
+  
+        <div
+          ref={div4Ref}
+          className={`card  date-description card-4`}
+          style={{ "--img": `url(${images[3]})` }}
+          data-description={description[3]}
+        >
+          <h2 className="date-text">{noms[3]}</h2>
+        </div>
+  
+        <div
+          ref={div5Ref}
+          className={`card  date-description card-5`}
+          style={{ "--img": `url(${images[4]})` }}
+          data-description={description[4]}
+        >
+          <h2 className="date-text">{noms[4]}</h2>
+        </div>
 
-      <div
-        ref={div3Ref}
-        className={`card  date-description card-3`}
-        style={{ "--img": `url(${images[2]})` }}
-        data-description={description[2]}
-      >
-        <h2 className="date-text">{noms[2]}</h2>
-      </div>
+</div>
 
-      <div
-        ref={div4Ref}
-        className={`card  date-description card-4`}
-        style={{ "--img": `url(${images[3]})` }}
-        data-description={description[3]}
-      >
-        <h2 className="date-text">{noms[3]}</h2>
-      </div>
-
-      <div
-        ref={div5Ref}
-        className={`card  date-description card-5`}
-        style={{ "--img": `url(${images[4]})` }}
-        data-description={description[4]}
-      >
-        <h2 className="date-text">{noms[4]}</h2>
-      </div>
+      )}
       {/* ))} */}
-    </div>
+    </>
   );
 }

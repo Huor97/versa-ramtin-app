@@ -9,12 +9,14 @@ import "./AboutUs.css";
 import { faWindowMinimize } from "@fortawesome/free-solid-svg-icons";
 
 export default function AboutUs({ normalization }) {
-  const initialLeft = 40;
+  // const initialLeft = 40;
+  const initialLeftSmallScreen = 30;
+  const initialLeftLargeScreen = 40;
   const [vesible, setVesible] = useState(false);
   const [fixedConstact, setFixedContact] = useState(false);
   const [vesibleArrow, setVesibleArrow] = useState(false);
   const [fixedLogo, setFixedLogo] = useState(false);
-  const [currentLeft, setCurrentLeft] = useState(initialLeft);
+  const [currentLeft, setCurrentLeft] = useState(initialLeftSmallScreen);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -33,6 +35,8 @@ export default function AboutUs({ normalization }) {
 
   useEffect(() => {
     const handleScroll = () => {
+      const initialLeft = window.innerWidth <= 768 ? initialLeftSmallScreen : initialLeftLargeScreen;
+
       if (fixedLogo) {
         if (currentLeft > 4) {
           setCurrentLeft((prevLeft) => prevLeft - 1);
@@ -47,7 +51,7 @@ export default function AboutUs({ normalization }) {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, [fixedLogo, currentLeft, initialLeft]);
+  }, [fixedLogo, currentLeft, initialLeftSmallScreen, initialLeftLargeScreen]);
 
   useEffect(() => {
     const vesibledScroll = () => {

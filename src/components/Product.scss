@@ -21,8 +21,22 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
+
+  .skw-page-2 {
+    @media screen and (max-width: 768px) {
+      top: 31vh;
+    }
+  }
+
+  .skw-page-3 {
+    @media screen and (max-width: 768px) {
+      top: 62vh;
+    }
+  }
 }
+
+
 
 $skewDeg: 18deg;
 $magicVH: 32.4vh; // this number is magic and depends on skew angle
@@ -34,12 +48,21 @@ $scrollTime: 1.5s;
   top: 0;
   width: 100%;
 
+  
+
   &__half {
     position: absolute;
     top: 0;
     width: 50%;
     height: 100vh;
     transition: transform $scrollTime;
+
+    @media screen and (max-width: 768px) {
+
+    width: 50%;
+    height: 30vh;
+
+    }
 
     &--left {
       left: 0;
@@ -93,6 +116,12 @@ $scrollTime: 1.5s;
     background-size: contain;
     background-repeat: no-repeat;
 
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      flex-flow: column;
+      }
+
     .skw-page__half--left & {
       padding-left: 30%;
       padding-right: 30%;
@@ -120,11 +149,17 @@ $scrollTime: 1.5s;
     padding: 0;
     text-align: start;
     // left: -11vw;
+    @media screen and (max-width: 768px) {
+      font-size: 0.7em;
+      }
   }
 
   &__description {
     font-size: 18px;
     margin-left: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 0.5em;
+      }
   }
 
   &__link {

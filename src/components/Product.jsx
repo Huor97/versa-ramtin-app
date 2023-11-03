@@ -8,12 +8,27 @@ export default function Product({ normalization }) {
   const [curPage, setCurPage] = useState(1);
   const [fixed, setFixed] = useState(false);
   const [scrollTimer, setScrollTimer] = useState(null);
-
-  // const [scrollCount, setScrollCount] = useState(0);
-  // const [scrollCount1, setScrollCount1] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
+  
   const numOfPages = 3; // Nombre total de pages
   const pgPrefix = "skw-page-";
+  // const [scrollCount, setScrollCount] = useState(0);
+  // const [scrollCount1, setScrollCount1] = useState(0);
   // const div1Ref = useRef(null);
+
+
+  useEffect(()=> {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768)
+    }
+
+    window.addEventListener("resize", handleResize);
+
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  })
+
   const slideInLeft = (elem, delay, duration) => {
     gsap.fromTo(
       elem,
@@ -212,7 +227,78 @@ export default function Product({ normalization }) {
 
 
   return (
-    <div
+    <>
+    
+    
+    {isSmallScreen ? (
+
+      <div
+      className={`skw-pages`}
+      // onWheel={handleScroll}
+      >
+
+          <div className="skw-page skw-page-1 active">
+
+            <div className="skw-page__half skw-page__half--left">
+              <div id="left" className="skw-page__skewed">
+                <div className="skw-page__content"></div>
+              </div>
+            </div>
+
+            <div className="skw-page__half skw-page__half--right">
+              <div id="right" className="skw-page__skewed">
+                <div className="skw-page__content">
+                  <h2 className="skw-page__heading">{nameProducts[0].title}</h2>
+                  <p className="skw-page__description">{nameProducts[0].description}</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div className="skw-page skw-page-2 active">
+
+              <div className="skw-page__half skw-page__half--left">
+                <div id="left" className="skw-page__skewed">
+                  <div className="skw-page__content"></div>
+                </div>
+              </div>
+
+              <div className="skw-page__half skw-page__half--right">
+                <div id="right" className="skw-page__skewed">
+                  <div className="skw-page__content">
+                    <h2 className="skw-page__heading">{nameProducts[0].title}</h2>
+                    <p className="skw-page__description">{nameProducts[0].description}</p>
+                  </div>
+                </div>
+              </div>
+
+          </div>
+
+          <div className="skw-page skw-page-3 active">
+
+              <div className="skw-page__half skw-page__half--left">
+                <div id="left" className="skw-page__skewed">
+                  <div className="skw-page__content"></div>
+                </div>
+              </div>
+
+              <div className="skw-page__half skw-page__half--right">
+                <div id="right" className="skw-page__skewed">
+                  <div className="skw-page__content">
+                    <h2 className="skw-page__heading">{nameProducts[0].title}</h2>
+                    <p className="skw-page__description">{nameProducts[0].description}</p>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+
+
+      </div>
+    ) : (
+      <div
       className={`skw-pages  ${fixed ? "fixed-product" : ""}`}
       onWheel={handleScroll}
     >
@@ -240,6 +326,8 @@ export default function Product({ normalization }) {
         </div>
       ))}
     </div>
+    )}
+    </>
   );
   // return (
   //   <div
