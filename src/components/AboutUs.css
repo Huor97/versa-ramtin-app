@@ -1,100 +1,99 @@
 .container-aboutUs {
-    width: 100vw;
-  
-    /* height: 50vh; */
-  }
-  
-  .langue {
-    position: fixed;
-    width: 100%;
-    top: 0;
-    /* left: 45vw; */
-    margin: 0;
-    padding: 0;
-    z-index: 999;
-  }
-  
-  .langue-change {
-    background: blanchedalmond;
-    border: none;
-    font-size: 15px;
-    font-weight: bold;
-    width: 15em;
-    height: 5em;
-    font-family: "Acumin-Variable-Concept", sans-serif;
-    font-family: "Acumin-Variable-Concept", serif;
-  }
-  
-  .hedden-langue {
-    display: none;
-  }
-  
-  .logo {
-    position: relative;
-    width: 20vw;
-    top: 40vh;
-    /* left: 40vw; */
-    z-index: 4000;
-  }
-  
-  .fixed-logo {
-    position: fixed;
-    width: 20vw;
-    top: 5vh;
-    /* left: 40vw; */
-    z-index: 4000;
-  }
-  
-  img {
-    width: 100%;
-  }
-  
-  .container-scrolling {
-    position: relative;
-    width: 5vw;
-    top: 65vh;
-    left: 48vw;
-  }
-  
-  .arrow-hidden {
-    display: none;
-  }
-  .container-arrow,
-  .container-scrolldown {
-    width: 5vw;
-  }
-  
-  .about-us-description {
-    position: relative;
-    width: 60vw;
-    left: 27vw;
-    top: 160vw;
-  }
-  
-  .about-us-contact {
-    position: relative;
-    width: 15vw;
-    left: 27vw;
-    top: 160vw;
-    z-index: 9999;
-  }
-  
-  .fixed-contact {
-    position: fixed;
-    width: 15vw;
-    left: 27vw;
-    top: 3vw;
-    z-index: 9999;
-  }
+  width: 100vw;
 
-  /* ====================================== Responsive */
-  /* Styles pour les écrans de petite taille */
+  /* height: 50vh; */
+}
+
+.langue {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  /* left: 45vw; */
+  margin: 0;
+  padding: 0;
+  z-index: 999;
+}
+
+.langue-change {
+  background: blanchedalmond;
+  border: none;
+  font-size: 15px;
+  font-weight: bold;
+  width: 15em;
+  height: 5em;
+  font-family: 'Acumin-Variable-Concept', sans-serif;
+  font-family: 'Acumin-Variable-Concept', serif;
+}
+
+.hedden-langue {
+  display: none;
+}
+
+.logo {
+  position: relative;
+  width: 20vw;
+  top: 40vh;
+  /* left: 40vw; */
+  z-index: 4000;
+}
+
+.fixed-logo {
+  position: fixed;
+  width: 20vw;
+  top: 5vh;
+  /* left: 40vw; */
+  z-index: 4000;
+}
+
+img {
+  width: 100%;
+}
+
+.container-scrolling {
+  position: relative;
+  width: 5vw;
+  top: 65vh;
+  left: 48vw;
+}
+
+.arrow-hidden {
+  display: none;
+}
+.container-arrow,
+.container-scrolldown {
+  width: 5vw;
+}
+
+.about-us-description {
+  position: relative;
+  width: 60vw;
+  left: 27vw;
+  top: 160vw;
+}
+
+.about-us-contact {
+  position: relative;
+  width: 15vw;
+  left: 27vw;
+  top: 160vw;
+  z-index: 9999;
+}
+
+.fixed-contact {
+  position: fixed;
+  width: 15vw;
+  left: 27vw;
+  top: 3vw;
+  z-index: 9999;
+}
+
+/* ====================================== Responsive */
+/* Styles pour les écrans de petite taille */
 @media screen and (max-width: 768px) {
   .langue-change {
     width: 5em;
     height: 2em;
   }
-  
 
   .logo {
     width: 40vw;

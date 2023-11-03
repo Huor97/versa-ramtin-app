@@ -1,5 +1,5 @@
-import { useRef, useState } from "react";
-import "./ProductsLongOnes.scss";
+import { useRef, useState } from 'react';
+import './ProductsLongOnes.scss';
 
 export default function ProductsLongOnes({ image, titre, isLarge }) {
   const [mouseX, setMouseX] = useState(0);
@@ -8,7 +8,7 @@ export default function ProductsLongOnes({ image, titre, isLarge }) {
 
   const cardRef = useRef();
 
-  const handleMouseMove = (e) => {
+  const handleMouseMove = e => {
     if (!cardRef.current) return;
 
     const cardRect = cardRef.current.getBoundingClientRect();

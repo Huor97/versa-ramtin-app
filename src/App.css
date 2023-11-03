@@ -6,7 +6,6 @@
 }
 */
 
-
 body {
   background-color: #000;
   margin: 0;
@@ -40,14 +39,12 @@ body {
 
 .section-products {
   height: 100vh;
-
 }
 
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
   .section-products {
     height: 230vh;
     /* background-color: #fff; */
-  
   }
 }
 

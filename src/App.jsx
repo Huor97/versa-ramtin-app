@@ -1,13 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState } from 'react';
 
-import "./App.css";
-import Canva from "./components/Canva";
-import Nav from "./components/Nav";
-import AboutUs from "./components/AboutUs";
-import Services from "./components/Services";
-import Product from "./components/Product";
-import Products from "./components/Products";
-import Contact from "./components/Contact";
+import './App.css';
+import Canva from './components/Canva';
+import Nav from './components/Nav';
+import AboutUs from './components/AboutUs';
+import Services from './components/Services';
+import Product from './components/Product';
+import Products from './components/Products';
+import Contact from './components/Contact';
 // import News from "./components/News";
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -21,11 +21,11 @@ function App() {
       setScrollY(scrollPosition);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     // N'oubliez pas de supprimer l'écouteur d'événement lorsque le composant est démonté
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
@@ -33,7 +33,7 @@ function App() {
 
   const backgroundStyle = {
     background: `linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 1) ${gradientValue}%, rgba(0, 0, 0, 0) 100%)`,
-    height: "2000px", // Ajustez la hauteur selon votre contenu
+    height: '2000px', // Ajustez la hauteur selon votre contenu
   };
 
   function normalizeValue(value, min, max) {
@@ -53,16 +53,16 @@ function App() {
       const normalizedPercentage = normalizeValue(
         scrollPosition,
         0,
-        documentHeight - windowHeight
+        documentHeight - windowHeight,
       );
 
       setScrollY(normalizedPercentage);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

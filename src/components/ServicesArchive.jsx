@@ -1,12 +1,12 @@
-import { useEffect, useRef, useState } from "react";
-import "./Services.css";
-import FoodStuff from "../images/Attachments_WEBp_for-Services/Food-Stuff.webp";
-import Detergents from "../images/Attachments_WEBp_for-Services/Detergents.webp";
-import Disposable from "../images/Attachments_WEBp_for-Services/Disposable-Dishes.webp";
-import Catering from "../images/Attachments_WEBp_for-Services/Catering.webp";
-import Logistics from "../images/Attachments_WEBp_for-Services/Logistics.webp";
-import { ScrollToPlugin, ScrollTrigger } from "gsap/all";
-import { gsap } from "gsap";
+import { useEffect, useRef, useState } from 'react';
+import './Services.css';
+import FoodStuff from '../images/Attachments_WEBp_for-Services/Food-Stuff.webp';
+import Detergents from '../images/Attachments_WEBp_for-Services/Detergents.webp';
+import Disposable from '../images/Attachments_WEBp_for-Services/Disposable-Dishes.webp';
+import Catering from '../images/Attachments_WEBp_for-Services/Catering.webp';
+import Logistics from '../images/Attachments_WEBp_for-Services/Logistics.webp';
+import { ScrollToPlugin, ScrollTrigger } from 'gsap/all';
+import { gsap } from 'gsap';
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 export default function Services({ normalization }) {
@@ -16,35 +16,35 @@ export default function Services({ normalization }) {
   const [jeux, setJeux] = useState([
     {
       image: FoodStuff,
-      titre: "Food Stuffs",
+      titre: 'Food Stuffs',
       description:
-        "Discover a world of exceptional foodstuffs, where trust in sourcing and commitment to excellence are at the heart of every product we offer.",
+        'Discover a world of exceptional foodstuffs, where trust in sourcing and commitment to excellence are at the heart of every product we offer.',
       isActive: false,
     },
     {
       image: Detergents,
-      titre: "Detergents",
+      titre: 'Detergents',
       description:
-        "Trust in our specially formulated detergents to provide a deep, thorough clean, while being gentle on your clothes and the environment.",
+        'Trust in our specially formulated detergents to provide a deep, thorough clean, while being gentle on your clothes and the environment.',
       isActive: false,
     },
     {
       image: Disposable,
-      titre: "Disposable Dishes",
+      titre: 'Disposable Dishes',
       description:
-        "Our selection of disposable dishes and products offers a convenient and environmentally-conscious solution, allowing you to enjoy every meal with ease and peace of mind.",
+        'Our selection of disposable dishes and products offers a convenient and environmentally-conscious solution, allowing you to enjoy every meal with ease and peace of mind.',
       isActive: false,
     },
     {
       image: Catering,
-      titre: "Catering",
+      titre: 'Catering',
       description:
-        "Trust us to turn your vision into reality with our personalized catering solutions, ensuring each dish reflects your unique taste and style.",
+        'Trust us to turn your vision into reality with our personalized catering solutions, ensuring each dish reflects your unique taste and style.',
       isActive: false,
     },
     {
       image: Logistics,
-      titre: "Logistics",
+      titre: 'Logistics',
       description:
         "From every corner of the globe to your doorstep, our logistics network ensures seamless and efficient delivery, connecting you with the world's markets.",
       isActive: false,
@@ -58,11 +58,11 @@ export default function Services({ normalization }) {
       normalization > 0.29 ? setStartAnimation(true) : setStartAnimation(false);
       // window.onclick ? setActived(true) : setActived(false);
     };
-    window.addEventListener("scroll", vesibledScroll);
-    window.addEventListener("click", vesibledScroll);
+    window.addEventListener('scroll', vesibledScroll);
+    window.addEventListener('click', vesibledScroll);
     return () => {
-      window.removeEventListener("scroll", vesibledScroll);
-      window.removeEventListener("click", vesibledScroll);
+      window.removeEventListener('scroll', vesibledScroll);
+      window.removeEventListener('click', vesibledScroll);
     };
   }, [normalization]);
 
@@ -75,140 +75,140 @@ export default function Services({ normalization }) {
   useEffect(() => {
     // =========================================== objet 1
     gsap.set(div1Ref.current, {
-      x: "-100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+      x: '-100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
       opacity: 0, // Rendez l'élément invisible
     });
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div1Ref.current,
-      start: "top 500px",
-      end: "bottom 500px",
+      start: 'top 500px',
+      end: 'bottom 500px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
         gsap.to(div1Ref.current, {
-          x: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
+          x: '0', // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
           opacity: 1, // Assurez-vous que l'élément est complètement visible
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
       onLeaveBack: () => {
         gsap.to(div1Ref.current, {
-          x: "-100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+          x: '-100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
           opacity: 0, // Rendez l'élément invisible pendant qu'il sort de la fenêtre
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
     });
 
     // ============================================ objet 2
     gsap.set(div5Ref.current, {
-      x: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+      x: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
       opacity: 0, // Rendez l'élément invisible
     });
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div5Ref.current,
-      start: "top 500px",
-      end: "bottom 500px",
+      start: 'top 500px',
+      end: 'bottom 500px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
         gsap.to(div5Ref.current, {
-          x: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
+          x: '0', // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
           opacity: 1, // Assurez-vous que l'élément est complètement visible
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
       onLeaveBack: () => {
         gsap.to(div5Ref.current, {
-          x: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+          x: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
           opacity: 0, // Rendez l'élément invisible pendant qu'il sort de la fenêtre
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
     });
 
     // ============================================ objet 3
     gsap.set(div2Ref.current, {
-      y: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+      y: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
       opacity: 0, // Rendez l'élément invisible
     });
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div2Ref.current,
-      start: "top 400px",
-      end: "bottom 400px",
+      start: 'top 400px',
+      end: 'bottom 400px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
         gsap.to(div2Ref.current, {
-          y: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
+          y: '0', // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
           opacity: 1, // Assurez-vous que l'élément est complètement visible
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
       onLeaveBack: () => {
         gsap.to(div2Ref.current, {
-          y: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+          y: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
           opacity: 0, // Rendez l'élément invisible pendant qu'il sort de la fenêtre
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
     });
 
     // ============================================ objet 4
     gsap.set(div4Ref.current, {
-      y: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+      y: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
       opacity: 0, // Rendez l'élément invisible
     });
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div4Ref.current,
-      start: "top 400px",
-      end: "bottom 400px",
+      start: 'top 400px',
+      end: 'bottom 400px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
         gsap.to(div4Ref.current, {
-          y: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
+          y: '0', // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
           opacity: 1, // Assurez-vous que l'élément est complètement visible
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
       onLeaveBack: () => {
         gsap.to(div4Ref.current, {
-          y: "100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+          y: '100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
           opacity: 0, // Rendez l'élément invisible pendant qu'il sort de la fenêtre
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
     });
 
     // ============================================ objet 4
     gsap.set(div3Ref.current, {
-      y: "-100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+      y: '-100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
       opacity: 0, // Rendez l'élément invisible
     });
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div3Ref.current,
-      start: "top 300px",
-      end: "bottom 300px",
+      start: 'top 300px',
+      end: 'bottom 300px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
         gsap.to(div3Ref.current, {
-          y: "0", // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
+          y: '0', // Amenez l'élément à sa position d'origine (à l'intérieur de la fenêtre)
           opacity: 1, // Assurez-vous que l'élément est complètement visible
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
       onLeaveBack: () => {
         gsap.to(div3Ref.current, {
-          y: "-100%", // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
+          y: '-100%', // Déplacez l'élément à l'extérieur de la fenêtre du côté gauche
           opacity: 0, // Rendez l'élément invisible pendant qu'il sort de la fenêtre
-          ease: "power1.inOut",
+          ease: 'power1.inOut',
         });
       },
     });
@@ -223,7 +223,7 @@ export default function Services({ normalization }) {
   //   isActive: i === index && !jeux.isActive;
   //   setJeux(updatedJeux);
   // };
-  const handleItemClick = (index) => {
+  const handleItemClick = index => {
     const updatedJeux = jeux.map((jeu, i) => ({
       ...jeu,
       isActive: i === index ? !jeu.isActive : false,
@@ -237,8 +237,8 @@ export default function Services({ normalization }) {
       // className={`game-section ${vesible ? "fixed" : "container-services"}  ${
       //   visibled ? "visible" : " hedden"
       // }`}
-      className={`game-section ${vesible ? "fixed" : "container-services"}  ${
-        visibled ? "visible" : " hedden"
+      className={`game-section ${vesible ? 'fixed' : 'container-services'}  ${
+        visibled ? 'visible' : ' hedden'
       }`}
 
       // className={`game-section `}
@@ -248,7 +248,7 @@ export default function Services({ normalization }) {
           ref={div1Ref}
           id="box1"
           // className={`item ${isActive ? "active" : ""}`}
-          className={`item ${jeux[0].isActive ? "active" : ""}`}
+          className={`item ${jeux[0].isActive ? 'active' : ''}`}
           onClick={() => handleItemClick(0)}
           // className={`item`}
           style={{ backgroundImage: `url(${jeux[0].image})` }}
@@ -266,7 +266,7 @@ export default function Services({ normalization }) {
           id="box2"
           // className={`item ${isActive ? "active" : ""}`}
           // className={`item`}
-          className={`item ${jeux[1].isActive ? "active" : ""}`}
+          className={`item ${jeux[1].isActive ? 'active' : ''}`}
           onClick={() => handleItemClick(1)}
           style={{ backgroundImage: `url(${jeux[1].image})` }}
           // onClick={() => handleItemClick(jeux[0].index[0])}
@@ -283,7 +283,7 @@ export default function Services({ normalization }) {
           id="box3"
           // className={`item ${isActive ? "active" : ""}`}
           // className={`item`}
-          className={`item ${jeux[2].isActive ? "active" : ""}`}
+          className={`item ${jeux[2].isActive ? 'active' : ''}`}
           onClick={() => handleItemClick(2)}
           style={{ backgroundImage: `url(${jeux[2].image})` }}
           // onClick={() => handleItemClick(jeux[0].index[0])}
@@ -300,7 +300,7 @@ export default function Services({ normalization }) {
           ref={div4Ref}
           // className={`item ${isActive ? "active" : ""}`}
           // className={`item`}
-          className={`item ${jeux[3].isActive ? "active" : ""}`}
+          className={`item ${jeux[3].isActive ? 'active' : ''}`}
           onClick={() => handleItemClick(3)}
           style={{ backgroundImage: `url(${jeux[3].image})` }}
           // onClick={() => handleItemClick(jeux[0].index[0])}
@@ -317,7 +317,7 @@ export default function Services({ normalization }) {
           id="box5"
           // className={`item ${isActive ? "active" : ""}`}
           // className={`item`}
-          className={`item ${jeux[4].isActive ? "active left-open" : ""}`}
+          className={`item ${jeux[4].isActive ? 'active left-open' : ''}`}
           onClick={() => handleItemClick(4)}
           style={{ backgroundImage: `url(${jeux[4].image})` }}
           // onClick={() => handleItemClick(jeux[0].index[0])}

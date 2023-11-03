@@ -1,19 +1,19 @@
-import { useGLTF } from "@react-three/drei";
-import { useEffect, useRef } from "react";
-import * as THREE from "three";
+import { useGLTF } from '@react-three/drei';
+import { useEffect, useRef } from 'react';
+import * as THREE from 'three';
 
 export default function Planet({ normalization }) {
   const refPlanet = useRef();
-  const gltfPath = "/image/earth/scene.gltf";
-  const texturePath = "/image/earth/textures/Planet_diffuse.jpeg"; // Chemin de la texture
+  const gltfPath = '/image/earth/scene.gltf';
+  const texturePath = '/image/earth/textures/Planet_diffuse.jpeg'; // Chemin de la texture
   const { scene } = useGLTF(gltfPath);
 
   useEffect(() => {
     const textureLoader = new THREE.TextureLoader();
-    textureLoader.load(texturePath, (texture) => {
+    textureLoader.load(texturePath, texture => {
       texture.encoding = THREE.sRGBEncoding;
       const material = new THREE.MeshBasicMaterial({ map: texture });
-      refPlanet.current.traverse((child) => {
+      refPlanet.current.traverse(child => {
         if (child instanceof THREE.Mesh) {
           child.material = material;
         }
@@ -55,9 +55,9 @@ export default function Planet({ normalization }) {
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 

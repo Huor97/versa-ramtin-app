@@ -36,8 +36,6 @@
   }
 }
 
-
-
 $skewDeg: 18deg;
 $magicVH: 32.4vh; // this number is magic and depends on skew angle
 $scrollTime: 1.5s;
@@ -48,8 +46,6 @@ $scrollTime: 1.5s;
   top: 0;
   width: 100%;
 
-  
-
   &__half {
     position: absolute;
     top: 0;
@@ -58,10 +54,8 @@ $scrollTime: 1.5s;
     transition: transform $scrollTime;
 
     @media screen and (max-width: 768px) {
-
-    width: 50%;
-    height: 30vh;
-
+      width: 50%;
+      height: 30vh;
     }
 
     &--left {
@@ -111,7 +105,9 @@ $scrollTime: 1.5s;
     padding: 0 30%;
     color: #fff;
     transform: skewX($skewDeg);
-    transition: transform $scrollTime, opacity $scrollTime;
+    transition:
+      transform $scrollTime,
+      opacity $scrollTime;
     // background-size: cover;
     background-size: contain;
     background-repeat: no-repeat;
@@ -120,7 +116,7 @@ $scrollTime: 1.5s;
       display: flex;
       flex-direction: column;
       flex-flow: column;
-      }
+    }
 
     .skw-page__half--left & {
       padding-left: 30%;
@@ -151,7 +147,7 @@ $scrollTime: 1.5s;
     // left: -11vw;
     @media screen and (max-width: 768px) {
       font-size: 0.7em;
-      }
+    }
   }
 
   &__description {
@@ -159,7 +155,7 @@ $scrollTime: 1.5s;
     margin-left: 0;
     @media screen and (max-width: 768px) {
       font-size: 0.5em;
-      }
+    }
   }
 
   &__link {
@@ -168,7 +164,7 @@ $scrollTime: 1.5s;
 
   &-1 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Tomato Paste.jpg");
+      background-image: url('../image/Tomato Paste.jpg');
     }
     .skw-page__half--right .skw-page__content {
       background: lighten(#ff0000, 5%);
@@ -176,7 +172,7 @@ $scrollTime: 1.5s;
   }
   &-2 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Pickles.jpg");
+      background-image: url('../image/Pickles.jpg');
     }
     .skw-page__half--right .skw-page__content {
       background: lighten(#033d06a8, 5%);
@@ -184,7 +180,7 @@ $scrollTime: 1.5s;
   }
   &-3 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Rice.jpg");
+      background-image: url('../image/Rice.jpg');
       background-size: cover;
     }
     .skw-page__half--right .skw-page__content {
@@ -257,8 +253,8 @@ p {
   color: black;
   font-size: 2rem;
   text-align: justify;
-  font-family: "Acumin Variable Concept", sans-serif;
-  font-family: "Acumin Variable Concept", serif;
+  font-family: 'Acumin Variable Concept', sans-serif;
+  font-family: 'Acumin Variable Concept', serif;
 }
 
 .products-image > h2 {

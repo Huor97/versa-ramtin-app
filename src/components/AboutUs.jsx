@@ -1,12 +1,12 @@
-import { useEffect, useState } from "react";
-import Logo from "../images/Logo.png";
-import ScrollDown from "../images/Scrolldown.png";
-import Arrow from "../images/Arrow.png";
-import About from "../images/REAL-about.png";
-import Contacts from "../images/Contacts.png";
+import { useEffect, useState } from 'react';
+import Logo from '../images/Logo.png';
+import ScrollDown from '../images/Scrolldown.png';
+import Arrow from '../images/Arrow.png';
+import About from '../images/REAL-about.png';
+import Contacts from '../images/Contacts.png';
 
-import "./AboutUs.css";
-import { faWindowMinimize } from "@fortawesome/free-solid-svg-icons";
+import './AboutUs.css';
+import { faWindowMinimize } from '@fortawesome/free-solid-svg-icons';
 
 export default function AboutUs({ normalization }) {
   // const initialLeft = 40;
@@ -20,36 +20,38 @@ export default function AboutUs({ normalization }) {
 
   useEffect(() => {
     const handleScroll = () => {
-
       window.scrollY > 300 ? setFixedLogo(true) : setFixedLogo(false);
       window.scrollY > 300 ? setVesibleArrow(true) : setVesibleArrow(false);
       normalization > 0.489 ? setFixedContact(true) : setFixedContact(false);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [normalization]);
 
   useEffect(() => {
     const handleScroll = () => {
-      const initialLeft = window.innerWidth <= 768 ? initialLeftSmallScreen : initialLeftLargeScreen;
+      const initialLeft =
+        window.innerWidth <= 768
+          ? initialLeftSmallScreen
+          : initialLeftLargeScreen;
 
       if (fixedLogo) {
         if (currentLeft > 4) {
-          setCurrentLeft((prevLeft) => prevLeft - 1);
+          setCurrentLeft(prevLeft => prevLeft - 1);
         }
       } else if (currentLeft < initialLeft) {
-        setCurrentLeft((prevLeft) => Math.min(prevLeft + 1, initialLeft));
+        setCurrentLeft(prevLeft => Math.min(prevLeft + 1, initialLeft));
       }
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, [fixedLogo, currentLeft, initialLeftSmallScreen, initialLeftLargeScreen]);
 
@@ -58,23 +60,23 @@ export default function AboutUs({ normalization }) {
       window.scrollY > 200 ? setVesible(true) : setVesible(false);
     };
 
-    window.addEventListener("scroll", vesibledScroll);
+    window.addEventListener('scroll', vesibledScroll);
 
     return () => {
-      window.removeEventListener("scroll", vesibledScroll);
+      window.removeEventListener('scroll', vesibledScroll);
     };
   }, []);
 
   return (
     <div className="container-aboutUs">
-      <div className={`langue ${vesible && "hedden-langue"}`}>
+      <div className={`langue ${vesible && 'hedden-langue'}`}>
         <button className="langue-change">
           {/*  */}
-          عربیه{" "}
+          عربیه{' '}
         </button>
       </div>
       <div
-        className={`${fixedLogo ? "fixed-logo" : "logo"} `}
+        className={`${fixedLogo ? 'fixed-logo' : 'logo'} `}
         style={{
           left: `${currentLeft}vw`,
         }}
@@ -88,7 +90,7 @@ export default function AboutUs({ normalization }) {
         globallyexporting
       </h2> */}
       <div
-        className={` ${vesibleArrow ? "arrow-hidden" : "container-scrolling"}`}
+        className={` ${vesibleArrow ? 'arrow-hidden' : 'container-scrolling'}`}
       >
         <div className={`container-arrow`}>
           <img src={Arrow} alt="arrow" />
@@ -118,7 +120,7 @@ export default function AboutUs({ normalization }) {
           </p> */}
         </div>
         <div
-          className={`${fixedConstact ? "fixed-contact" : "about-us-contact"}`}
+          className={`${fixedConstact ? 'fixed-contact' : 'about-us-contact'}`}
         >
           <img src={Contacts} alt="contacts" />
           {/* <h2>contact US:</h2>
