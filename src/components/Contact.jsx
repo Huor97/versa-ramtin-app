@@ -108,8 +108,13 @@ const Form = ({ normalization }) => {
 
   useEffect(() => {
     const vesibledScroll = () => {
-      // window.scrollY > 7500 ? setIsExpanded(true) : setIsExpanded(false);
-      normalization > 0.999 ? setVisibled1(true) : setVisibled1(false);
+      if (window.innerWidth <= 768) {
+        // window.scrollY > 7500 ? setIsExpanded(true) : setIsExpanded(false);
+        normalization > 0.979 ? setVisibled1(true) : setVisibled1(false);
+      } else {
+        // window.scrollY > 7500 ? setIsExpanded(true) : setIsExpanded(false);
+        normalization > 0.999 ? setVisibled1(true) : setVisibled1(false);
+      }
     };
 
     window.addEventListener('scroll', vesibledScroll);

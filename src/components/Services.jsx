@@ -24,9 +24,10 @@ const description = [
   'Trust us to turn your vision into reality with our personalized catering solutions, ensuring each dish reflects your unique taste and style.',
   "From every corner of the globe to your doorstep, our logistics network ensures seamless and efficient delivery, connecting you with the world's markets.",
 ];
+// eslint-disable-next-line react/prop-types
 export default function Services({ normalization }) {
   const [vesible, setVesible] = useState(false);
-  const [visibled, setVisibled] = useState(false);
+  // const [visibled, setVisibled] = useState(false);
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
   const div1Ref = useRef(null);
   const div2Ref = useRef(null);
@@ -51,7 +52,7 @@ export default function Services({ normalization }) {
   useEffect(() => {
     const vesibledScroll = () => {
       normalization > 0.474 ? setVesible(true) : setVesible(false);
-      normalization > 0.28 ? setVisibled(true) : setVisibled(false);
+      // normalization > 0.28 ? setVisibled(true) : setVisibled(false);
       // window.onclick ? setActived(true) : setActived(false);
     };
     window.addEventListener('scroll', vesibledScroll);

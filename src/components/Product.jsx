@@ -178,7 +178,7 @@ export default function Product({ normalization }) {
       } else if (delta < 0 && curPage > 1) {
         setCurPage(curPage - 1);
       }
-    }, 700); // Délai de 500 millisecondes
+    }, 500); // Délai de 500 millisecondes
 
     setScrollTimer(newScrollTimer);
   };

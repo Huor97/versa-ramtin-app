@@ -127,26 +127,22 @@ img {
 
   .about-us-contact {
     width: 27vw;
-    left: 10vw;
+    left: 28vw;
     top: 180vw;
   }
 
   .fixed-contact {
-    left: 10vw;
-    top: 2vw;
+    left: 27vw;
+    top: 4.5vw;
   }
 }
 
 /* Styles pour les écrans de taille moyenne */
 @media screen and (min-width: 769px) and (max-width: 1024px) {
-  .langue {
-    /* left: 35vw; */
-  }
-
-  .logo {
+  /* .logo {
     width: 30vw;
     top: 30vh;
-  }
+  } */
 
   .container-scrolling {
     width: 7vw;
@@ -167,22 +163,18 @@ img {
   }
 
   .fixed-contact {
-    left: 15vw;
-    top: 2vw;
+    left: 27vw;
+    top: 4.5vw;
   }
 }
 
 /* Styles pour les écrans de grande taille */
 @media screen and (min-width: 1025px) {
-  .langue {
-    /* left: 45vw; */
-  }
-
-  .logo {
+  /* .logo {
     width: 20vw;
     top: 40vh;
     left: 40vw;
-  }
+  } */
 
   .container-scrolling {
     width: 5vw;

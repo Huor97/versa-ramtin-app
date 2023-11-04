@@ -165,6 +165,9 @@ $scrollTime: 1.5s;
   &-1 {
     .skw-page__half--left .skw-page__content {
       background-image: url('../image/Tomato Paste.jpg');
+      @media screen and (max-width: 768px) {
+        background-size: cover;
+      }
     }
     .skw-page__half--right .skw-page__content {
       background: lighten(#ff0000, 5%);
@@ -173,6 +176,7 @@ $scrollTime: 1.5s;
   &-2 {
     .skw-page__half--left .skw-page__content {
       background-image: url('../image/Pickles.jpg');
+      background-size: cover;
     }
     .skw-page__half--right .skw-page__content {
       background: lighten(#033d06a8, 5%);

@@ -10,6 +10,8 @@ export default function Nav({ normalization }) {
   const [active, setActive] = useState(false);
   const [activeSection, setActiveSection] = useState(null);
   const [scrollY, setScrollY] = useState(0);
+  const [scrollYSmallScreen, setScrollYSmallScreen] = useState(0);
+  const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 768);
 
   const handleScrollTo = scrollPosition => {
     window.scrollTo({
@@ -32,6 +34,34 @@ export default function Nav({ normalization }) {
     }
   };
 
+  const handleScrollSmallScreen = () => {
+    if (window.scrollY > 2000) {
+      // Récupérez la hauteur totale de votre page
+      const totalHeight =
+        document.documentElement.scrollHeight - window.innerHeight;
+
+      console.log('totalHeight', totalHeight);
+
+      // Mettez à jour la valeur de scrollY entre 0 et 100
+      let newScrollY = (window.scrollY / totalHeight) * 100 - 30;
+      // Mettez à jour la valeur de scrollY avec la nouvelle valeur calculée
+      setScrollYSmallScreen(newScrollY);
+      // console.log("newScroll :" ,newScrollY);
+    }
+  };
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsSmallScreen(window.innerWidth <= 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   useEffect(() => {
     // Ajoutez un écouteur d'événements pour écouter les événements de défilement
     window.addEventListener('scroll', handleScroll);
@@ -39,6 +69,16 @@ export default function Nav({ normalization }) {
     // Nettoyez l'écouteur d'événements lors du démontage du composant
     return () => {
       window.removeEventListener('scroll', handleScroll);
+    };
+  }, []); // Le tableau vide [] assure que cet effet ne s'exécute qu'une fois après le rendu initial
+
+  useEffect(() => {
+    // Ajoutez un écouteur d'événements pour écouter les événements de défilement
+    window.addEventListener('scroll', handleScrollSmallScreen);
+
+    // Nettoyez l'écouteur d'événements lors du démontage du composant
+    return () => {
+      window.removeEventListener('scroll', handleScrollSmallScreen);
     };
   }, []); // Le tableau vide [] assure que cet effet ne s'exécute qu'une fois après le rendu initial
 
@@ -51,7 +91,7 @@ export default function Nav({ normalization }) {
       //   setActiveSection("news");
       // }
 
-      if (normalization >= 1) {
+      if (normalization >= 0.997) {
         setActiveSection('contact');
       } else if (normalization >= 0.69) {
         setActiveSection('products');
@@ -70,57 +110,121 @@ export default function Nav({ normalization }) {
       window.removeEventListener('scroll', scrollActive);
     };
   }, [normalization]);
-  console.log(normalization, 'normalization');
-  return (
-    <div className="nav">
-      <div className={`ligne ${active ? '' : 'navbar-active'}`}></div>
-      <div
-        className={`about-gradient ${activeGradient ? '' : 'navbar-active'}`}
-        style={{ transform: `translateY(${scrollY}px)` }}
-      ></div>
+  console.log(window.scrollY, 'window.scrollY');
 
-      <div className={`navbar ${active ? '' : 'navbar-active'}`}>
-        <ul>
-          <li
-            style={{ color: activeSection === 'about' ? '#dfceba' : '#4f6073' }}
-            onClick={() => handleScrollTo(2000)}
-          >
-            ABOUT US
-          </li>
-          <li
-            style={{
-              color: activeSection === 'services' ? '#dfceba' : '#4f6073',
-            }}
-            onClick={() => handleScrollTo(2760)}
-          >
-            SERVICES
-          </li>
-          <li
-            style={{
-              color: activeSection === 'products' ? '#dfceba' : '#4f6073',
-            }}
-            onClick={() => handleScrollTo(3550)}
-          >
-            PRODUCTS
-          </li>
-          <li
-            style={{
-              color: activeSection === 'contact' ? '#dfceba' : '#4f6073',
-            }}
-            onClick={() => handleScrollTo(7430)}
-          >
-            CONTACT US
-          </li>
-          {/* <li
-            style={{
-              color: activeSection === "news" ? "#dfceba" : "#4f6073",
-            }}
-            onClick={() => handleScrollTo(11000)}
-          >
-            NEWS
-          </li> */}
-        </ul>
-      </div>
-    </div>
+  return (
+    <>
+      {isSmallScreen ? (
+        <div className="nav">
+          <div className={`ligne ${active ? '' : 'navbar-active'}`}></div>
+          <div
+            className={`about-gradient ${
+              activeGradient ? '' : 'navbar-active'
+            }`}
+            style={{ transform: `translateY(${scrollYSmallScreen}px)` }}
+          ></div>
+
+          <div className={`navbar ${active ? '' : 'navbar-active'}`}>
+            <ul>
+              <li
+                style={{
+                  color: activeSection === 'about' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(2000)}
+              >
+                ABOUT US
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'services' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(2760)}
+              >
+                SERVICES
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'products' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(3550)}
+              >
+                PRODUCTS
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'contact' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(7430)}
+              >
+                CONTACT US
+              </li>
+              {/* <li
+        style={{
+          color: activeSection === "news" ? "#dfceba" : "#4f6073",
+        }}
+        onClick={() => handleScrollTo(11000)}
+      >
+        NEWS
+      </li> */}
+            </ul>
+          </div>
+        </div>
+      ) : (
+        <div className="nav">
+          <div className={`ligne ${active ? '' : 'navbar-active'}`}></div>
+          <div
+            className={`about-gradient ${
+              activeGradient ? '' : 'navbar-active'
+            }`}
+            style={{ transform: `translateY(${scrollY}px)` }}
+          ></div>
+
+          <div className={`navbar ${active ? '' : 'navbar-active'}`}>
+            <ul>
+              <li
+                style={{
+                  color: activeSection === 'about' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(2000)}
+              >
+                ABOUT US
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'services' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(2760)}
+              >
+                SERVICES
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'products' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(3550)}
+              >
+                PRODUCTS
+              </li>
+              <li
+                style={{
+                  color: activeSection === 'contact' ? '#dfceba' : '#4f6073',
+                }}
+                onClick={() => handleScrollTo(7430)}
+              >
+                CONTACT US
+              </li>
+              {/* <li
+        style={{
+          color: activeSection === "news" ? "#dfceba" : "#4f6073",
+        }}
+        onClick={() => handleScrollTo(11000)}
+      >
+        NEWS
+      </li> */}
+            </ul>
+          </div>
+        </div>
+      )}
+    </>
   );
 }
