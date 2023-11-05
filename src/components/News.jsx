@@ -1,5 +1,5 @@
-import { useEffect, useState } from "react";
-import "./News.css"; // Assurez-vous de créer un fichier de style séparé
+import { useEffect, useState } from 'react';
+import './News.css'; // Assurez-vous de créer un fichier de style séparé
 // import Tuna from "../images/products/Tuna.jpg";
 // import Tuna from "../images/products/Tuna.jpg";
 
@@ -8,7 +8,7 @@ const Post = ({ day, month, image, title, content }) => {
 
   return (
     <figure
-      className={`snip1529 ${isHovered ? "hover" : ""} `}
+      className={`snip1529 ${isHovered ? 'hover' : ''} `}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
@@ -37,10 +37,10 @@ export default function News() {
       window.scrollY > 10531 ? setVisibled(true) : setVisibled(false);
     };
 
-    window.addEventListener("scroll", vesibledScroll);
+    window.addEventListener('scroll', vesibledScroll);
 
     return () => {
-      window.removeEventListener("scroll", vesibledScroll);
+      window.removeEventListener('scroll', vesibledScroll);
     };
   }, []);
   //   const newss = [
@@ -74,7 +74,7 @@ export default function News() {
   //   ];
 
   return (
-    <div className={`container-news ${visibled ? "fixed-news" : ""}`}>
+    <div className={`container-news ${visibled ? 'fixed-news' : ''}`}>
       {/* {newss.map((news, index) => (
         <Post
           key={index}

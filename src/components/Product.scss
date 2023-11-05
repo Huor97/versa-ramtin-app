@@ -21,7 +21,19 @@
   top: 0;
   left: 0;
   width: 100vw;
-  height: 80vh;
+  height: 100vh;
+
+  .skw-page-2 {
+    @media screen and (max-width: 768px) {
+      top: 31vh;
+    }
+  }
+
+  .skw-page-3 {
+    @media screen and (max-width: 768px) {
+      top: 62vh;
+    }
+  }
 }
 
 $skewDeg: 18deg;
@@ -40,6 +52,11 @@ $scrollTime: 1.5s;
     width: 50%;
     height: 100vh;
     transition: transform $scrollTime;
+
+    @media screen and (max-width: 768px) {
+      width: 50%;
+      height: 30vh;
+    }
 
     &--left {
       left: 0;
@@ -88,10 +105,18 @@ $scrollTime: 1.5s;
     padding: 0 30%;
     color: #fff;
     transform: skewX($skewDeg);
-    transition: transform $scrollTime, opacity $scrollTime;
+    transition:
+      transform $scrollTime,
+      opacity $scrollTime;
     // background-size: cover;
     background-size: contain;
     background-repeat: no-repeat;
+
+    @media screen and (max-width: 768px) {
+      display: flex;
+      flex-direction: column;
+      flex-flow: column;
+    }
 
     .skw-page__half--left & {
       padding-left: 30%;
@@ -120,11 +145,20 @@ $scrollTime: 1.5s;
     padding: 0;
     text-align: start;
     // left: -11vw;
+    @media screen and (max-width: 768px) {
+      font-size: 0.7em;
+      margin-bottom: 4px;
+      text-align: center;
+    }
   }
 
   &__description {
     font-size: 18px;
     margin-left: 0;
+    @media screen and (max-width: 768px) {
+      font-size: 0.5em;
+      width: 37vw;
+    }
   }
 
   &__link {
@@ -133,7 +167,10 @@ $scrollTime: 1.5s;
 
   &-1 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Tomato Paste.jpg");
+      background-image: url('../image/Tomato Paste.jpg');
+      @media screen and (max-width: 768px) {
+        background-size: cover;
+      }
     }
     .skw-page__half--right .skw-page__content {
       background: lighten(#ff0000, 5%);
@@ -141,15 +178,16 @@ $scrollTime: 1.5s;
   }
   &-2 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Pickles.jpg");
+      background-image: url('../image/Pickles.jpg');
+      background-size: cover;
     }
     .skw-page__half--right .skw-page__content {
-      background: lighten(#033d06a8, 5%);
+      background: lighten(#808000, 5%);
     }
   }
   &-3 {
     .skw-page__half--left .skw-page__content {
-      background-image: url("../image/Rice.jpg");
+      background-image: url('../image/Rice.jpg');
       background-size: cover;
     }
     .skw-page__half--right .skw-page__content {
@@ -222,8 +260,8 @@ p {
   color: black;
   font-size: 2rem;
   text-align: justify;
-  font-family: "Acumin Variable Concept", sans-serif;
-  font-family: "Acumin Variable Concept", serif;
+  font-family: 'Acumin Variable Concept', sans-serif;
+  font-family: 'Acumin Variable Concept', serif;
 }
 
 .products-image > h2 {

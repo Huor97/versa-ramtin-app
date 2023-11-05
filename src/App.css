@@ -6,7 +6,6 @@
 }
 */
 
-
 body {
   background-color: #000;
   margin: 0;
@@ -23,7 +22,7 @@ body {
 
 .section-aboutUs {
   /* background-color: rgb(109, 109, 109); */
-  height: 385vh;
+  height: 400vh;
 }
 
 .section-services {
@@ -40,6 +39,18 @@ body {
 
 .section-products {
   height: 100vh;
+}
+
+@media screen and (max-width: 768px) {
+  .section-products {
+    height: 230vh;
+    /* background-color: #fff; */
+  }
+
+  .section-aboutUs {
+    /* background-color: rgb(142, 154, 219); */
+    height: 250vh;
+  }
 }
 
 .section-contact {
