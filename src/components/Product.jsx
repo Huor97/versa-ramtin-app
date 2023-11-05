@@ -259,9 +259,9 @@ export default function Product({ normalization }) {
             <div className="skw-page__half skw-page__half--right">
               <div id="right" className="skw-page__skewed">
                 <div className="skw-page__content">
-                  <h2 className="skw-page__heading">{nameProducts[0].title}</h2>
+                  <h2 className="skw-page__heading">{nameProducts[1].title}</h2>
                   <p className="skw-page__description">
-                    {nameProducts[0].description}
+                    {nameProducts[1].description}
                   </p>
                 </div>
               </div>
@@ -278,9 +278,9 @@ export default function Product({ normalization }) {
             <div className="skw-page__half skw-page__half--right">
               <div id="right" className="skw-page__skewed">
                 <div className="skw-page__content">
-                  <h2 className="skw-page__heading">{nameProducts[0].title}</h2>
+                  <h2 className="skw-page__heading">{nameProducts[2].title}</h2>
                   <p className="skw-page__description">
-                    {nameProducts[0].description}
+                    {nameProducts[2].description}
                   </p>
                 </div>
               </div>

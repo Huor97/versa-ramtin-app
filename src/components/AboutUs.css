@@ -75,7 +75,7 @@ img {
   position: relative;
   width: 15vw;
   left: 27vw;
-  top: 160vw;
+  top: 327vh;
   z-index: 9999;
 }
 
@@ -159,7 +159,6 @@ img {
   .about-us-contact {
     width: 7vw;
     left: 15vw;
-    top: 170vw;
   }
 
   .fixed-contact {
@@ -191,11 +190,9 @@ img {
   .about-us-contact {
     width: 15vw;
     left: 27vw;
-    top: 160vw;
   }
 
   .fixed-contact {
     left: 27vw;
-    top: 3vw;
   }
 }

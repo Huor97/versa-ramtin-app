@@ -147,6 +147,8 @@ $scrollTime: 1.5s;
     // left: -11vw;
     @media screen and (max-width: 768px) {
       font-size: 0.7em;
+      margin-bottom: 4px;
+      text-align: center;
     }
   }
 
@@ -155,6 +157,7 @@ $scrollTime: 1.5s;
     margin-left: 0;
     @media screen and (max-width: 768px) {
       font-size: 0.5em;
+      width: 37vw;
     }
   }
 
@@ -179,7 +182,7 @@ $scrollTime: 1.5s;
       background-size: cover;
     }
     .skw-page__half--right .skw-page__content {
-      background: lighten(#033d06a8, 5%);
+      background: lighten(#808000, 5%);
     }
   }
   &-3 {

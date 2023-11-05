@@ -27,7 +27,7 @@ export default function Nav({ normalization }) {
         document.documentElement.scrollHeight - window.innerHeight;
 
       // Mettez à jour la valeur de scrollY entre 0 et 100
-      let newScrollY = (window.scrollY / totalHeight) * 120 - 21;
+      let newScrollY = (window.scrollY / totalHeight) * 100 - 25;
       // Mettez à jour la valeur de scrollY avec la nouvelle valeur calculée
       setScrollY(newScrollY);
       // console.log("newScroll :" ,newScrollY);
@@ -91,16 +91,30 @@ export default function Nav({ normalization }) {
       //   setActiveSection("news");
       // }
 
-      if (normalization >= 0.997) {
-        setActiveSection('contact');
-      } else if (normalization >= 0.69) {
-        setActiveSection('products');
-      } else if (normalization >= 0.455) {
-        setActiveSection('services');
-      } else if (normalization >= 0.19) {
-        setActiveSection('about');
+      if (window.innerWidth <= 768) {
+        if (normalization >= 0.997) {
+          setActiveSection('contact');
+        } else if (normalization >= 0.6) {
+          setActiveSection('products');
+        } else if (normalization >= 0.299) {
+          setActiveSection('services');
+        } else if (normalization >= 0.01) {
+          setActiveSection('about');
+        } else {
+          setActiveSection(null);
+        }
       } else {
-        setActiveSection(null);
+        if (normalization >= 0.997) {
+          setActiveSection('contact');
+        } else if (normalization >= 0.69) {
+          setActiveSection('products');
+        } else if (normalization >= 0.455) {
+          setActiveSection('services');
+        } else if (normalization >= 0.19) {
+          setActiveSection('about');
+        } else {
+          setActiveSection(null);
+        }
       }
     };
 
@@ -130,7 +144,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'about' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(2000)}
+                onClick={() => handleScrollTo(500)}
               >
                 ABOUT US
               </li>
@@ -138,7 +152,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'services' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(2760)}
+                onClick={() => handleScrollTo(2000)}
               >
                 SERVICES
               </li>
@@ -146,7 +160,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'products' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(3550)}
+                onClick={() => handleScrollTo(4000)}
               >
                 PRODUCTS
               </li>
@@ -185,7 +199,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'about' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(2000)}
+                onClick={() => handleScrollTo(2800)}
               >
                 ABOUT US
               </li>
@@ -193,7 +207,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'services' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(2760)}
+                onClick={() => handleScrollTo(3550)}
               >
                 SERVICES
               </li>
@@ -201,7 +215,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'products' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(3550)}
+                onClick={() => handleScrollTo(4550)}
               >
                 PRODUCTS
               </li>

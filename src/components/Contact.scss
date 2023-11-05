@@ -566,12 +566,18 @@ input:-webkit-autofill {
   box-shadow: 3px 4px 42px -10px rgb(120, 179, 255);
 }
 
+// .container-copyright {
+//   background-color: #fff;
+//   position: relative;
+//   width: 100vw;
+// }
+
 .copyright {
   // position: relative;
   // right: 2vw;
-  opacity: 0;
-  bottom: 1vh;
-  font-size: 24px;
+  // opacity: 0;
+  // bottom: 1vh;
+  // font-size: 24px;
   color: #fff;
 }
 
@@ -580,4 +586,12 @@ input:-webkit-autofill {
   color: #fff;
   bottom: 1vh;
   font-size: 24px;
+  // background-color: #fff;
+  width: 100vw;
+  padding: 20px 0 15px 0;
+  border-top: 1px solid #dbd5d5;
+
+  @media screen and (max-width: 768px) {
+    padding: 15px 0 10px 0;
+  }
 }

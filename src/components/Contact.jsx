@@ -327,7 +327,9 @@ const Form = ({ normalization }) => {
           </form>
         </div>
       </div>
-
+      {/* <div className="container-copyright">
+        <span className={`copyright `}>©2023</span>
+      </div> */}
       <span className={`copyright ${visibled1 ? 'fixed' : ''}`}>©2023</span>
     </div>
   );

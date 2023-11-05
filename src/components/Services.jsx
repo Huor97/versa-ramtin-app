@@ -174,8 +174,8 @@ export default function Services({ normalization }) {
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div2Ref.current,
-      start: 'top 450px',
-      end: 'bottom 450px',
+      start: 'top 750px',
+      end: 'bottom 750px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
@@ -197,8 +197,8 @@ export default function Services({ normalization }) {
     // Initialiser un deuxième ScrollTrigger pour faire disparaître l'objet après un certain défilement supplémentaire
     ScrollTrigger.create({
       trigger: div2Ref.current,
-      start: 'top 100px', // Définissez le point de départ pour la disparition de l'objet
-      end: 'bottom 100px', // Définissez le point de fin pour la disparition de l'objet
+      start: 'top 150px', // Définissez le point de départ pour la disparition de l'objet
+      end: 'bottom 150px', // Définissez le point de fin pour la disparition de l'objet
       // markers: true,
 
       onEnter: () => {
@@ -225,8 +225,8 @@ export default function Services({ normalization }) {
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div4Ref.current,
-      start: 'top 450px',
-      end: 'bottom 450px',
+      start: 'top 750px',
+      end: 'bottom 750px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
@@ -247,8 +247,8 @@ export default function Services({ normalization }) {
 
     ScrollTrigger.create({
       trigger: div4Ref.current,
-      start: 'top 100px', // Définissez le point de départ pour la disparition de l'objet
-      end: 'bottom 100px', // Définissez le point de fin pour la disparition de l'objet
+      start: 'top 150px', // Définissez le point de départ pour la disparition de l'objet
+      end: 'bottom 150px', // Définissez le point de fin pour la disparition de l'objet
       // markers: true,
 
       onEnter: () => {
@@ -275,8 +275,8 @@ export default function Services({ normalization }) {
     // Initialiser ScrollTrigger pour le premier élément
     ScrollTrigger.create({
       trigger: div3Ref.current,
-      start: 'top 300px',
-      end: 'bottom 300px',
+      start: 'top -20px',
+      end: 'bottom -20px',
       scrub: 0.5,
       // markers: true,
       onEnter: () => {
