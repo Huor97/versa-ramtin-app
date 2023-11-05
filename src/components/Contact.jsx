@@ -1,9 +1,10 @@
-import React, { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import './Contact.scss'; // Assurez-vous de créer ce fichier de style pour les styles CSS.
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPencil } from '@fortawesome/free-solid-svg-icons';
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 // import { faWhatsapp } from "@fortawesome/free-solid-svg-icons";
+import emailjs from '@emailjs/browser';
 import {
   faWhatsapp,
   faLinkedinIn,
@@ -28,7 +29,7 @@ const Form = ({ normalization }) => {
     message: '',
   });
 
-  console.log('normal ==> contact:', normalization);
+  // console.log('normal ==> contact:', normalization);
 
   // const slideInLeft = (elem, delay, duration) => {
   //   gsap.fromTo(
@@ -93,18 +94,39 @@ const Form = ({ normalization }) => {
     e.stopPropagation();
   };
 
-  const handleSubmit = e => {
+  // const handleSubmit = e => {
+  //   e.preventDefault();
+  //   // Logique de validation du formulaire ici
+  //   // Réinitialiser le formulaire après la soumission
+  //   setFormData({
+  //     user_name: '',
+  //     user_email: '',
+  //     subject: '',
+  //     message: '',
+  //   });
+  //   setIsExpanded(false);
+  // };
+
+  function sendEmail(e) {
     e.preventDefault();
-    // Logique de validation du formulaire ici
-    // Réinitialiser le formulaire après la soumission
-    setFormData({
-      user_name: '',
-      user_email: '',
-      subject: '',
-      message: '',
-    });
-    setIsExpanded(false);
-  };
+
+    emailjs
+      .sendForm(
+        'service_0jl8vtj',
+        'template_i6usyel',
+        e.target,
+        '6JDIAL65b8KfmPTuy',
+      )
+      .then(
+        result => {
+          console.log(result.text);
+        },
+        error => {
+          console.log(error.text);
+        },
+      );
+    e.target.reset();
+  }
 
   useEffect(() => {
     const vesibledScroll = () => {
@@ -283,24 +305,25 @@ const Form = ({ normalization }) => {
               <p>Good choice...</p>
             </div>
           )}
-          <form onSubmit={handleSubmit}>
+
+          <form onSubmit={sendEmail}>
             <input
               className="input name"
               type="text"
               name="user_name"
               placeholder="Your name please"
-              value={formData.user_name}
-              onChange={handleChange}
-              required
+              // value={formData.user_name}
+              // onChange={handleChange}
+              // required
             />
             <input
               className="input email"
               type="email"
               name="user_email"
               placeholder="A contact email"
-              value={formData.user_email}
-              onChange={handleChange}
-              required
+              // value={formData.user_email}
+              // onChange={handleChange}
+              // required
             />
             {/* <select
               className="input select"
@@ -315,9 +338,9 @@ const Form = ({ normalization }) => {
               className="input message"
               name="message"
               placeholder="How can I help ?"
-              value={formData.message}
-              onChange={handleChange}
-              required
+              // value={formData.message}
+              // onChange={handleChange}
+              // required
             />
             <input
               className="input submit"

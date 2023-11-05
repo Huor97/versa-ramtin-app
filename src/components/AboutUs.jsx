@@ -178,7 +178,7 @@ export default function AboutUs({ normalization }) {
           <div className={`langue ${vesible && 'hedden-langue'}`}>
             <button className="langue-change">
               {/*  */}
-              عربیه{' '}
+              العربیه
             </button>
           </div>
           <div
