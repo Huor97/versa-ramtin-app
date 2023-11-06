@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import Logo from '../images/Logo.png';
-import ScrollDown from '../images/Scrolldown.png';
+import Logo from '../images/Logo-Arabic.png';
+import ScrollDown from '../images/Scrolldown only-arabic.png';
 import Arrow from '../images/Arrow.png';
-import About from '../images/REAL-about.png';
+import About from '../images/About us-Arabic.png';
 import Contacts from '../images/Contacts.png';
 
 import './AboutUs.css';
