@@ -209,17 +209,17 @@ export default function Product({ normalization }) {
     {
       title: 'صلصلة طماطم',
       description:
-        'الطماطم هو منتج مركز مصنوع من الطماطم، حيث يتم طهيها لساعات عدة لإزالة الماء، وتصفية البذور والقشور، ثم طهي السائل مرة أخرى للتقليل منه إلى تركيز سميك وغني. يُستخدم لإعطاء نكهة طماطم مكثفة في مجموعة متنوعة من الأطباق مثل الباستا والحساء ولحوم البازلاء. وهو يستخدم كمكون أساسي في مأكولات عديدة في مختلف المأكولات العالمية.',
+        'الطماطم هو منتج مركز مصنوع من الطماطم، حيث يتم طهيها لساعات عدة لإزالة الماء، وتصفية البذور والقشور، ثم طهي السائل مرة أخرى للتقليل منه إلى تركيز سميك وغني. يُستخدم لإعطاء نكهة طماطم مكثفة في مجموعة متنوعة من الأطباق مثل الباستا والحساء ولحوم البازلاء. وهو يستخدم كمكون أساسي في مأكولات عديدة في مختلف المأكولات العالمية',
     },
     {
       title: 'مخلل',
       description:
-        'A pickled cucumber – commonly known as a pickle in the United States and Canada and a gherkin (/ɡərkɪn/) in Britain, Ireland, South Africa, Australia, and New Zealand – is a usually small or miniature cucumber that has been pickled in a brine, vinegar, or other solution and left to ferment. The fermentation process is executed either by immersing the cucumbers in an acidic solution or through souring by lacto-fermentation. Pickled cucumbers are often part of mixed pickles.',
+        'الخيار المخلل - المعروف باسم المخلل في الولايات المتحدة وكندا والخيار المخلل (/ɡərkɪn/) في بريطانيا وأيرلندا وجنوب أفريقيا وأستراليا ونيوزيلندا - عادة ما يكون خيارًا صغيرًا أو مصغرًا تم مخلله في محلول ملحي أو خل أو أي محلول آخر ويترك ليتخمر. تتم عملية التخمير إما عن طريق غمر الخيار في محلول حمضي أو عن طريق التخمير اللبني. غالبًا ما يكون الخيار المخلل جزءًا من المخللات المختلطة',
     },
     {
       title: 'أرز',
       description:
-        'Rice is the seed of the grass species Oryza sativa (Asian rice) or, less commonly, O. glaberrima (African rice). The name wild rice is usually used for species of the genera Zizania and Porteresia, both wild and domesticated, although the term may also be used for primitive or uncultivated varieties of Oryza.',
+        'الأرز هو بذور الأنواع العشبية Oryza sativa (الأرز الآسيوي) أو، بشكل أقل شيوعًا، O. glaberrima (الأرز الأفريقي). يستخدم اسم الأرز البري عادة للأنواع من جنس زيزانيا وبورتيريسيا، سواء البرية أو المستأنسة، على الرغم من أن المصطلح يمكن أن يستخدم أيضًا للأصناف البدائية أو غير المزروعة من أوريزا',
     },
   ];
 

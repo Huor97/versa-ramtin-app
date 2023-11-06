@@ -90,7 +90,7 @@
 
 .title-produc1 {
   position: fixed;
-  margin: 0 15px;
+  margin: 0 -15px;
   width: 100%;
   top: 70%;
   font-family: 'Acumin Variable Concept', sans-serif;
@@ -99,4 +99,5 @@
   font-weight: bold;
   color: rgb(223, 206, 186);
   text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.6);
+  text-align: end;
 }

@@ -99,7 +99,7 @@ export default function Products({ normalization }) {
     },
     {
       image: Safron,
-      titre: 'Safron',
+      titre: 'زعفران',
     },
     {
       image: Pickles,
@@ -110,15 +110,15 @@ export default function Products({ normalization }) {
   const longOnes = [
     {
       image: DishWashings,
-      titre: 'Dish Washings',
+      titre: 'غسالات الأطباق',
     },
     {
       image: Disinfectant,
-      titre: 'Disinfectant',
+      titre: 'مطهر',
     },
     {
       image: HandWashes,
-      titre: 'Hand Washes',
+      titre: 'يغسل اليد',
     },
   ];
 
@@ -194,7 +194,7 @@ export default function Products({ normalization }) {
   return (
     <div className={` container-products ${visibled ? 'fixed-products' : ''}`}>
       <div className="title">
-        <h2>Some of our other products</h2>
+        <h2>بعض منتجاتنا الأخرى</h2>
       </div>
       <div ref={div1Ref} className="products">
         {jeux.map((jeu, index) => (

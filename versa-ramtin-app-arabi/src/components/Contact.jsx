@@ -237,7 +237,7 @@ const Form = ({ normalization }) => {
     // <div className={`contacte ${visibled1 ? "fixed-contacte" : "contacte"} `}>
     <div className={`contacte`}>
       <h1 className="contacte-us" ref={div3Ref}>
-        Contact us
+        اتصل بنا
       </h1>
       <ul className="social-icons">
         <li>
@@ -302,7 +302,7 @@ const Form = ({ normalization }) => {
               >
                 X
               </span>
-              <p>Good choice...</p>
+              <p>...اختيار جيد</p>
             </div>
           )}
 
@@ -311,7 +311,7 @@ const Form = ({ normalization }) => {
               className="input name"
               type="text"
               name="user_name"
-              placeholder="Your name please"
+              placeholder="اسمك من فضلك"
               // value={formData.user_name}
               // onChange={handleChange}
               // required
@@ -320,7 +320,7 @@ const Form = ({ normalization }) => {
               className="input email"
               type="email"
               name="user_email"
-              placeholder="A contact email"
+              placeholder="بريد إلكتروني للاتصال"
               // value={formData.user_email}
               // onChange={handleChange}
               // required
@@ -337,16 +337,12 @@ const Form = ({ normalization }) => {
             <textarea
               className="input message"
               name="message"
-              placeholder="How can I help ?"
+              placeholder="كيف يمكنني أن أقدم المساعدة ؟"
               // value={formData.message}
               // onChange={handleChange}
               // required
             />
-            <input
-              className="input submit"
-              type="submit"
-              value="Send Message"
-            />
+            <input className="input submit" type="submit" value="أرسل رسالة" />
           </form>
         </div>
       </div>
