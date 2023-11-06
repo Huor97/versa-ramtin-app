@@ -132,10 +132,10 @@ const Form = ({ normalization }) => {
     const vesibledScroll = () => {
       if (window.innerWidth <= 768) {
         // window.scrollY > 7500 ? setIsExpanded(true) : setIsExpanded(false);
-        normalization > 0.979 ? setVisibled1(true) : setVisibled1(false);
+        normalization >= 0.97 ? setVisibled1(true) : setVisibled1(false);
       } else {
         // window.scrollY > 7500 ? setIsExpanded(true) : setIsExpanded(false);
-        normalization > 0.999 ? setVisibled1(true) : setVisibled1(false);
+        normalization > 0.99 ? setVisibled1(true) : setVisibled1(false);
       }
     };
 

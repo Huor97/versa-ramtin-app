@@ -104,9 +104,9 @@ export default function Nav({ normalization }) {
           setActiveSection(null);
         }
       } else {
-        if (normalization >= 0.997) {
+        if (normalization >= 0.99) {
           setActiveSection('contact');
-        } else if (normalization >= 0.69) {
+        } else if (normalization >= 0.899) {
           setActiveSection('products');
         } else if (normalization >= 0.455) {
           setActiveSection('services');
@@ -199,7 +199,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'about' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(2800)}
+                onClick={() => handleScrollTo(2500)}
               >
                 ABOUT US
               </li>
@@ -207,7 +207,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'services' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(3550)}
+                onClick={() => handleScrollTo(3559)}
               >
                 SERVICES
               </li>
@@ -215,7 +215,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'products' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(4550)}
+                onClick={() => handleScrollTo(6365)}
               >
                 PRODUCTS
               </li>
@@ -223,7 +223,7 @@ export default function Nav({ normalization }) {
                 style={{
                   color: activeSection === 'contact' ? '#dfceba' : '#4f6073',
                 }}
-                onClick={() => handleScrollTo(7430)}
+                onClick={() => handleScrollTo(7530)}
               >
                 CONTACT US
               </li>

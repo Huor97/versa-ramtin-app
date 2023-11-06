@@ -45,8 +45,8 @@ export default function AboutUs({ normalization }) {
         ? setFixedLogoSmallScreen(true)
         : setFixedLogoSmallScreen(false);
       window.scrollY > 300 ? setVesibleArrow(true) : setVesibleArrow(false);
-      normalization > 0.489 ? setFixedContact(true) : setFixedContact(false);
-      normalization > 0.126
+      normalization > 0.446 ? setFixedContact(true) : setFixedContact(false);
+      normalization > 0.15
         ? setFixedConstactSmallScrenn(true)
         : setFixedConstactSmallScrenn(false);
     };
@@ -136,8 +136,9 @@ export default function AboutUs({ normalization }) {
       {isSmallScreen ? (
         <div className="container-aboutUs">
           <div className={`langue ${vesible && 'hedden-langue'}`}>
-            <button className="langue-change">عربیه </button>
+            <button className="langue-change">العربیه</button>
           </div>
+
           <div
             className={`${fixedLogoSmallScreen ? 'fixed-logo' : 'logo'} `}
             style={{
@@ -181,6 +182,7 @@ export default function AboutUs({ normalization }) {
               العربیه
             </button>
           </div>
+
           <div
             className={`${fixedLogo ? 'fixed-logo' : 'logo'} `}
             style={{
@@ -189,6 +191,7 @@ export default function AboutUs({ normalization }) {
           >
             <img src={Logo} alt="logo de site" />
           </div>
+
           {/* <h1 className={` ${fixedLogo ? "title-fixed-logo" : "title-aboutUs"}  `}>
           VERSAL LOGO
         </h1>
