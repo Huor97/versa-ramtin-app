@@ -68,14 +68,14 @@ img {
   position: relative;
   width: 60vw;
   left: 27vw;
-  top: 160vw;
+  top: 289vh;
 }
 
 .about-us-contact {
   position: relative;
   width: 15vw;
   left: 27vw;
-  top: 327vh;
+  top: 290vh;
   z-index: 9999;
 }
 
@@ -83,7 +83,7 @@ img {
   position: fixed;
   width: 15vw;
   left: 27vw;
-  top: 3vw;
+  top: 6vh;
   z-index: 9999;
 }
 
@@ -122,18 +122,18 @@ img {
   .about-us-description {
     width: 80vw;
     left: 10vw;
-    top: 180vw;
+    top: 100vh;
   }
 
   .about-us-contact {
     width: 27vw;
     left: 28vw;
-    top: 180vw;
+    top: 101vh;
   }
 
   .fixed-contact {
     left: 27vw;
-    top: 4.5vw;
+    top: 2.5vh;
   }
 }
 
@@ -153,7 +153,7 @@ img {
   .about-us-description {
     width: 70vw;
     left: 15vw;
-    top: 170vw;
+    /* top: 170vw; */
   }
 
   .about-us-contact {
@@ -163,7 +163,7 @@ img {
 
   .fixed-contact {
     left: 27vw;
-    top: 4.5vw;
+    top: 6vh;
   }
 }
 
@@ -184,7 +184,6 @@ img {
   .about-us-description {
     width: 60vw;
     left: 27vw;
-    top: 160vw;
   }
 
   .about-us-contact {

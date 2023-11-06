@@ -51,7 +51,17 @@ export default function Planet({ normalization }) {
 
         refPlanet.current.position.x = positionX;
         refPlanet.current.rotation.y = rotationSpeed;
-        refPlanet.current.scale.set(scale, scale1, scale);
+
+        // refPlanet.current.scale.set(scale - 0.1, scale1, scale - 0.1);
+        if (scrollY <= 1400) {
+          refPlanet.current.scale.set(scale, scale1, scale);
+        }
+        if (scrollY <= 1690 && scrollY > 1450) {
+          refPlanet.current.scale.set(scale - 0.1, scale1, scale - 0.1);
+        }
+        if (scrollY > 1700) {
+          refPlanet.current.scale.set(scale - 0.2, scale1, scale - 0.2);
+        }
       }
     };
 

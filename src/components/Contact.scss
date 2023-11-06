@@ -32,7 +32,7 @@ $easer: cubic-bezier(0.4, 0, 0.2, 1);
   font-size: 40px;
   line-height: 60px;
   display: block;
-  margin-top: 15px;
+  margin-top: 20px;
   transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -107,7 +107,7 @@ h2 {
   margin: 0 auto;
   left: 0;
   right: 0;
-  bottom: 8vh;
+  bottom: 12vh;
   background-color: #4f6073;
 
   overflow: hidden;
@@ -257,6 +257,10 @@ h2 {
   box-shadow: none;
   transform: translateX(0);
 }
+
+.name {
+  margin-top: 25px;
+}
 ::-webkit-input-placeholder {
   /* Safari, Chrome and Opera */
   color: rgba(255, 255, 255, 0.8);
@@ -299,7 +303,7 @@ textarea {
   background-color: $col-accent;
   color: #030b15;
   font-size: 120%;
-  height: 80px;
+  height: 60px;
   box-shadow: 0 5px rgba(0, 0, 0, 0.5);
   transition:
     all 0.1s,
