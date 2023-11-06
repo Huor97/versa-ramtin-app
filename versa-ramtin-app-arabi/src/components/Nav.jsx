@@ -201,7 +201,7 @@ export default function Nav({ normalization }) {
                 }}
                 onClick={() => handleScrollTo(2500)}
               >
-                ABOUT US
+                معلومات عنا
               </li>
               <li
                 style={{
@@ -209,7 +209,7 @@ export default function Nav({ normalization }) {
                 }}
                 onClick={() => handleScrollTo(3559)}
               >
-                SERVICES
+                خدمات
               </li>
               <li
                 style={{
@@ -217,7 +217,7 @@ export default function Nav({ normalization }) {
                 }}
                 onClick={() => handleScrollTo(6365)}
               >
-                PRODUCTS
+                منتجات
               </li>
               <li
                 style={{
@@ -225,7 +225,7 @@ export default function Nav({ normalization }) {
                 }}
                 onClick={() => handleScrollTo(7530)}
               >
-                CONTACT US
+                اتصل بنا
               </li>
               {/* <li
         style={{
