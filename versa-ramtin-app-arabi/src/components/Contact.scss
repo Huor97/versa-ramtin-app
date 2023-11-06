@@ -260,6 +260,9 @@ h2 {
 
 .name {
   margin-top: 25px;
+  @media screen and (max-width: 768px) {
+    margin-top: 50px;
+  }
 }
 ::-webkit-input-placeholder {
   /* Safari, Chrome and Opera */
@@ -355,9 +358,9 @@ input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #form-container.expand {
-    height: 100%;
+    height: 96%;
     width: 100%;
     max-width: 100%;
     overflow: initial;

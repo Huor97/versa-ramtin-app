@@ -45,8 +45,8 @@ export default function AboutUs({ normalization }) {
         ? setFixedLogoSmallScreen(true)
         : setFixedLogoSmallScreen(false);
       window.scrollY > 300 ? setVesibleArrow(true) : setVesibleArrow(false);
-      normalization > 0.446 ? setFixedContact(true) : setFixedContact(false);
-      normalization > 0.15
+      normalization > 0.421 ? setFixedContact(true) : setFixedContact(false);
+      normalization > 0.1451
         ? setFixedConstactSmallScrenn(true)
         : setFixedConstactSmallScrenn(false);
     };
