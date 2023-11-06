@@ -8,6 +8,7 @@ import Services from './components/Services';
 import Product from './components/Product';
 import Products from './components/Products';
 import Contact from './components/Contact';
+import { Loader } from '@react-three/drei';
 // import News from "./components/News";
 function App() {
   const [scrollY, setScrollY] = useState(0);
@@ -71,6 +72,7 @@ function App() {
   return (
     <div className="App" style={backgroundStyle}>
       <Canva normalization={scrollY} />
+      <Loader />
       <section className="section-aboutUs">
         <Nav normalization={scrollY} />
 
