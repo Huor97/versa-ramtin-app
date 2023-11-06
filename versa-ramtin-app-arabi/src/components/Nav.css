@@ -1,0 +1,130 @@
+.nav {
+  position: fixed;
+  width: 100vw;
+  height: 20vh;
+  z-index: 999;
+  background-color: rgb(0, 0, 0);
+  background: linear-gradient(to bottom, #000000fb, #000000da, #0000008e);
+  transition: background 0.5s ease;
+}
+
+.about-gradient {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  right: 2.48vw;
+  top: 3.5vh;
+  z-index: 1;
+  background-color: antiquewhite;
+}
+
+.ligne {
+  width: 1px;
+  height: 80px;
+  right: 3vw;
+  top: 5vh;
+  position: fixed;
+  background-color: #4f6073;
+}
+
+.navbar {
+  position: fixed;
+  right: 0;
+  margin-right: 4vw;
+  text-decoration: none;
+}
+
+.navbar-active {
+  display: none;
+}
+
+.navbar > ul {
+  display: flex;
+  margin-top: 3vh;
+  flex-direction: column;
+  justify-content: start;
+  align-items: start;
+  padding: 12px;
+  list-style: none;
+
+  transition: opacity 3s ease-in-out;
+}
+
+.navbar-active ul {
+  opacity: 1;
+}
+
+.navbar > ul > li {
+  margin-bottom: 10px;
+  font-family: 'Acumin Variable Concept', sans-serif;
+  font-family: 'Acumin Variable Concept', serif;
+  cursor: pointer;
+  color: #4f6073;
+}
+
+.navbar > ul > li:hover {
+  color: #dfceba;
+  transition: 0.5s ease-in-out;
+}
+
+/* Styles pour les écrans de petite taille */
+@media screen and (max-width: 768px) {
+  .nav {
+    height: 14vh;
+  }
+
+  .ligne {
+    top: 2vh;
+  }
+
+  .about-gradient {
+    width: 0.7em;
+    height: 0.7em;
+    right: 2vw;
+    top: 3vw;
+  }
+
+  .navbar > ul {
+    margin-top: 0.5vh;
+  }
+  .navbar > ul > li {
+    font-size: 0.7em;
+  }
+}
+
+/* Styles pour les écrans de taille moyenne à grande */
+@media screen and (min-width: 769px) {
+  /* .navbar-active {
+    display: none;
+  }
+
+  .navbar > ul {
+    display: flex;
+    margin-top: 3vh;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    padding: 12px;
+    list-style: none;
+
+    transition: opacity 3s ease-in-out;
+  }
+
+  .navbar-active ul {
+    opacity: 1;
+  }
+
+  .navbar > ul > li {
+    margin-bottom: 10px;
+    font-family: "Acumin Variable Concept", sans-serif;
+    font-family: "Acumin Variable Concept", serif;
+    cursor: pointer;
+    color: #4f6073;
+  }
+
+  .navbar > ul > li:hover {
+    color: #dfceba;
+    transition: 0.5s ease-in-out;
+  } */
+}
