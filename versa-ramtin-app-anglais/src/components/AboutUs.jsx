@@ -136,7 +136,9 @@ export default function AboutUs({ normalization }) {
       {isSmallScreen ? (
         <div className="container-aboutUs">
           <div className={`langue ${vesible && 'hedden-langue'}`}>
-            <button className="langue-change">العربیه</button>
+            <a href="https://versa-ramtin-app-arabi.vercel.app">
+              <button className="langue-change">العربیه</button>
+            </a>
           </div>
 
           <div
@@ -177,10 +179,12 @@ export default function AboutUs({ normalization }) {
       ) : (
         <div className="container-aboutUs">
           <div className={`langue ${vesible && 'hedden-langue'}`}>
-            <button className="langue-change">
-              {/*  */}
-              العربیه
-            </button>
+            <a href="https://versa-ramtin-app-arabi.vercel.app">
+              <button className="langue-change">
+                {/*  */}
+                العربیه
+              </button>
+            </a>
           </div>
 
           <div
